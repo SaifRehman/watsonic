@@ -23,7 +23,23 @@ export class watsonVisualRecognition {
     public getVisualRecognitonDataByOnlyURL(url): Observable<any> {
         const link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + 
         WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-         "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg"+
+        url +
+          "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString()
+        const bodyObject = {};
+        const bodyString = JSON.stringify(bodyObject); // Stringify payload
+       return this.http.get(link) // ...using post request
+            .map((res) => {
+                return res;
+            })
+            .catch((error: any) => {
+                return Observable.throw(error.json().error || 'Server error');
+            });
+      }
+
+      public getVisualRecognitonForFacesDataByOnlyURL(url): Observable<any> {
+        const link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=" + 
+        WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
+        url +
           "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString()
         const bodyObject = {};
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
