@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { WatsonModule} from '../watsonServices/watson.module';
+import {HttpClient} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -15,6 +18,7 @@ import { WatsonModule} from '../watsonServices/watson.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule,
     WatsonModule,
   ],
   bootstrap: [IonicApp],
@@ -25,6 +29,7 @@ import { WatsonModule} from '../watsonServices/watson.module';
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
