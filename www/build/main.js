@@ -132,14 +132,13 @@ var watsonTranslation = (function () {
     function watsonTranslation(http) {
         this.http = http;
     }
-    watsonTranslation.prototype.getVisualRecognitonDataByOnlyURL = function (url) {
-        var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" +
-            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-            url +
-            "&version=" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString()
-            + "&threshold=" +
-            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.threshold.toString();
-        var bodyObject = {};
+    watsonTranslation.prototype.translateToALanguage = function (text, lang) {
+        var link = "https://" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authUsername + ":" +
+            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authPassword + "gateway.watsonplatform.net/language-translator/api/v2/translate";
+        var bodyObject = {
+            text: text,
+            model_id: lang
+        };
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
             .map(function (res) {
