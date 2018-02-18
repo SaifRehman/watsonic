@@ -9,7 +9,7 @@ export class HomePage {
 
   public url: string = "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition: watsonVisualRecognition) {
-    this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe((data) => {
+    this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe((data) => {
       console.log(data);
     },
       (error) => {
