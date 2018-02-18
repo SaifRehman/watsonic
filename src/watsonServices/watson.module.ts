@@ -1,5 +1,6 @@
 import {  NgModule } from '@angular/core';
 import { watsonAuthService } from './auth.service';
+import { watsonVisualRecognition } from './watsonVisualRecognition.service';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { watsonAuthService } from './auth.service';
   ],
   providers: [
     watsonAuthService,
+    watsonVisualRecognition,
   ]
 })
 export class WatsonModule {}

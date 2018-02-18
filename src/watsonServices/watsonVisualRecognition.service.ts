@@ -26,10 +26,13 @@ export class watsonVisualRecognition {
             parameters: this.parameters
         }
         return Observable.defer(() => {
+            console.log('function called')
             return new Promise((resolve, reject) => {
+                console.log('in promise');
                 this.visualRecognition.classify(this.params, function (err, res) {
+                    console.log('in visual recog call api ');
                     if (err) {
-                        console.log(err);
+                        console.log('there is errorrrrrr',err);
                         throw err;
                     } else {
                         console.log(JSON.stringify(res, null, 2));
@@ -40,4 +43,5 @@ export class watsonVisualRecognition {
             });
         });
     }
+}
 
