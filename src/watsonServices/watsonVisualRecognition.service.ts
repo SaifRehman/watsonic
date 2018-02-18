@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import * as watson from 'watson-developer-cloud';
 import * as fs from 'fs';
 import { WatsonConfig } from './watson.config';
+import {Headers, Http, RequestOptions, Response} from '@angular/http';
+import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class watsonVisualRecognition {
     public visualRecognition = new watson.VisualRecognitionV3({
@@ -13,35 +15,25 @@ export class watsonVisualRecognition {
     public parameters: any;
     public params: any;
 
-    public constructor() {
+    public constructor( public http: HttpClient) {
         this.parameters = {};
         this.params = {};
     }
 
-    public getVisualRecognitonDataByOnlyURL(link): Observable<any> {
-        this.parameters = {
-            url: link
-        }
-        this.params = {
-            parameters: this.parameters
-        }
-        return Observable.defer(() => {
-            console.log('function called')
-            return new Promise((resolve, reject) => {
-                console.log('in promise');
-                this.visualRecognition.classify(this.params, function (err, res) {
-                    console.log('in visual recog call api ');
-                    if (err) {
-                        console.log('there is errorrrrrr',err);
-                        throw err;
-                    } else {
-                        console.log(JSON.stringify(res, null, 2));
-                        resolve(res);
-                    }
-                });
-
+    public getVisualRecognitonDataByOnlyURL(url): Observable<any> {
+        const link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + 
+        WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
+         "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg"+
+          "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString()
+        const bodyObject = {};
+        const bodyString = JSON.stringify(bodyObject); // Stringify payload
+       return this.http.get(link) // ...using post request
+            .map((res) => {
+                return res;
+            })
+            .catch((error: any) => {
+                return Observable.throw(error.json().error || 'Server error');
             });
-        });
-    }
+      }
 }
 

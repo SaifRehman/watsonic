@@ -1,5 +1,5 @@
 export class WatsonConfig {
-    public static authUsername = 'user';
+    public static authUsername = '';
     public static authPassword = 'password';
     public static authURL = {
         wantsonVisualRecognition:{
