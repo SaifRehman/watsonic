@@ -7,9 +7,8 @@ webpackJsonp([0],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WatsonModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(1078);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_service__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_service__ = __webpack_require__(1079);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_service__ = __webpack_require__(513);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,12 +19,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var WatsonModule = (function () {
     function WatsonModule() {
     }
     WatsonModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [],
             imports: [],
             entryComponents: [],
@@ -33,7 +31,6 @@ var WatsonModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* watsonAuthService */],
                 __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_service__["a" /* watsonVisualRecognition */],
                 __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_service__["a" /* watsonTranslation */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */],
             ]
         })
     ], WatsonModule);
@@ -50,11 +47,10 @@ var WatsonModule = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return watsonAuthService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__ = __webpack_require__(440);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watson_config__ = __webpack_require__(515);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67,11 +63,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var watsonAuthService = (function () {
     function watsonAuthService() {
         this.authorization = new __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__["AuthorizationV1"]({
-            username: __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authUsername,
             password: '<Text to Speech password>',
             url: 'https://stream.watsonplatform.net/authorization/api',
         });
@@ -105,78 +99,7 @@ var watsonAuthService = (function () {
 
 /***/ }),
 
-/***/ 1079:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return watsonTranslation; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(151);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var watsonTranslation = (function () {
-    function watsonTranslation(http) {
-        this.http = http;
-    }
-    watsonTranslation.prototype.translateToALanguage = function (text, lang) {
-        var link = "https://" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authUsername + ":" +
-            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authPassword + "gateway.watsonplatform.net/language-translator/api/v2/translate";
-        var bodyObject = {
-            text: text,
-            model_id: lang
-        };
-        var bodyString = JSON.stringify(bodyObject); // Stringify payload
-        return this.http.get(link) // ...using post request
-            .map(function (res) {
-            return res;
-        })
-            .catch(function (error) {
-            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
-        });
-    };
-    watsonTranslation.prototype.getVisualRecognitonForFacesDataByOnlyURL = function (url) {
-        var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=" +
-            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-            url +
-            "&version=" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString() + "&threshold=" +
-            __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.threshold.toString();
-        var bodyObject = {};
-        var bodyString = JSON.stringify(bodyObject); // Stringify payload
-        return this.http.get(link) // ...using post request
-            .map(function (res) {
-            return res;
-        })
-            .catch(function (error) {
-            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
-        });
-    };
-    watsonTranslation = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
-    ], watsonTranslation);
-    return watsonTranslation;
-    var _a;
-}());
-
-//# sourceMappingURL=watsonTranslation.service.js.map
-
-/***/ }),
-
-/***/ 260:
+/***/ 258:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -189,11 +112,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 260;
+webpackEmptyAsyncContext.id = 258;
 
 /***/ }),
 
-/***/ 304:
+/***/ 303:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -206,18 +129,19 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 304;
+webpackEmptyAsyncContext.id = 303;
 
 /***/ }),
 
-/***/ 350:
+/***/ 349:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__ = __webpack_require__(513);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -230,12 +154,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
-    function HomePage(navCtrl, WatsonVisualRecognition) {
+    function HomePage(navCtrl, WatsonVisualRecognition, WatsonTranslation) {
         this.navCtrl = navCtrl;
         this.WatsonVisualRecognition = WatsonVisualRecognition;
+        this.WatsonTranslation = WatsonTranslation;
         this.url = "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg";
-        this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe(function (data) {
+        this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe(function (data) {
+            console.log(data);
+        }, function (error) {
+            console.log(error);
+        });
+        this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe(function (data) {
             console.log(data);
         }, function (error) {
             console.log(error);
@@ -245,7 +176,7 @@ var HomePage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */], __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */]])
     ], HomePage);
     return HomePage;
 }());
@@ -254,18 +185,18 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 351:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return watsonVisualRecognition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__ = __webpack_require__(440);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_watson_developer_cloud__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watson_config__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watson_config__ = __webpack_require__(512);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(150);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -294,7 +225,9 @@ var watsonVisualRecognition = (function () {
         var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" +
             __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
             url +
-            "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
+            "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString()
+            + "&threshold=" +
+            __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.threshold.toString();
         var bodyObject = {};
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
@@ -309,7 +242,8 @@ var watsonVisualRecognition = (function () {
         var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=" +
             __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
             url +
-            "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
+            "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString() + "&threshold=" +
+            __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.threshold.toString();
         var bodyObject = {};
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
@@ -322,7 +256,7 @@ var watsonVisualRecognition = (function () {
     };
     watsonVisualRecognition = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */]])
     ], watsonVisualRecognition);
     return watsonVisualRecognition;
 }());
@@ -331,7 +265,7 @@ var watsonVisualRecognition = (function () {
 
 /***/ }),
 
-/***/ 515:
+/***/ 512:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -357,13 +291,77 @@ var WatsonConfig = (function () {
 
 /***/ }),
 
-/***/ 516:
+/***/ 513:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return watsonTranslation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(512);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(150);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var watsonTranslation = (function () {
+    function watsonTranslation(http) {
+        this.http = http;
+    }
+    watsonTranslation.prototype.translateToALanguage = function (text, lang) {
+        var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authPassword);
+        // let headers = new HttpHeaders({'Content-Type': 'application/json'})
+        //  .set("authorization", auth);
+        var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
+            headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json',
+                'Authorization': 'Basic ' + token
+            })
+        });
+        console.log(token);
+        var link = "https://gateway.watsonplatform.net/language-translator/api/v2/translate";
+        var bodyObject = {
+            text: text,
+            model_id: lang
+        };
+        var bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.post(link, bodyObject, options) // ...using post request
+            .map(function (res) {
+            return res;
+        })
+            .catch(function (error) {
+            console.log(error);
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
+    watsonTranslation = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
+    ], watsonTranslation);
+    return watsonTranslation;
+}());
+
+//# sourceMappingURL=watsonTranslation.service.js.map
+
+/***/ }),
+
+/***/ 514:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(517);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(515);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(519);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -371,20 +369,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 521:
+/***/ 519:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(564);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(562);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__watsonServices_watson_module__ = __webpack_require__(1077);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__(150);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -400,12 +398,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]
@@ -415,8 +412,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
-                __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_7__watsonServices_watson_module__["a" /* WatsonModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_http__["c" /* HttpModule */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -426,7 +423,6 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["a" /* HttpClient */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -438,16 +434,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 564:
+/***/ 562:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(349);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -519,5 +515,5 @@ var MyApp = (function () {
 
 /***/ })
 
-},[516]);
+},[514]);
 //# sourceMappingURL=main.js.map

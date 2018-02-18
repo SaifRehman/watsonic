@@ -4,7 +4,6 @@ import * as watson from 'watson-developer-cloud';
 import * as fs from 'fs';
 import { WatsonConfig } from './watson.config';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class watsonVisualRecognition {
     public visualRecognition = new watson.VisualRecognitionV3({
@@ -15,7 +14,7 @@ export class watsonVisualRecognition {
     public parameters: any;
     public params: any;
 
-    public constructor(public http: HttpClient) {
+    public constructor(public http: Http) {
         this.parameters = {};
         this.params = {};
     }
