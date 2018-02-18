@@ -28,7 +28,7 @@ export class watsonTranslation {
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link, bodyObject, options) // ...using post request
             .map((res) => {
-                return res;
+                return JSON.parse(res['_body']);
             })
             .catch((error: any) => {
                 console.log(error);

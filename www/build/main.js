@@ -160,18 +160,19 @@ var HomePage = (function () {
         this.navCtrl = navCtrl;
         this.WatsonVisualRecognition = WatsonVisualRecognition;
         this.WatsonTranslation = WatsonTranslation;
-        this.url = "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg";
-        this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe(function (data) {
-            console.log('data', data);
-        }, function (error) {
-            console.log(error);
-        });
-        //   this.WatsonTranslation.translateToALanguage('hello','en-es').subscribe((data) =>{
-        //     console.log(data);
-        //   },
-        // (error)=>{
-        //   console.log(error)
-        // })
+        this.url = "http://lorempixel.com/100/100/";
+        // this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe((data) => {
+        //   console.log('data', data);
+        // },
+        //   (error) => {
+        //     console.log(error)
+        //   });
+        // this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe((data) => {
+        //   console.log(data);
+        // },
+        //   (error) => {
+        //     console.log(error)
+        //   })
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -341,7 +342,7 @@ var watsonTranslation = (function () {
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link, bodyObject, options) // ...using post request
             .map(function (res) {
-            return res;
+            return JSON.parse(res['_body']);
         })
             .catch(function (error) {
             console.log(error);
@@ -350,9 +351,10 @@ var watsonTranslation = (function () {
     };
     watsonTranslation = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
     ], watsonTranslation);
     return watsonTranslation;
+    var _a;
 }());
 
 //# sourceMappingURL=watsonTranslation.service.js.map
