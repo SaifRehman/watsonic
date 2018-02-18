@@ -7,15 +7,13 @@ import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecogn
 })
 export class HomePage {
 
-  public url: string = "https://loremflickr.com/cache/resized/4473_37419767910_471a2c84e6_q_100_100_nofilter.jpg";
+  public url: string = "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition: watsonVisualRecognition) {
-    this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe((data) => {
+    this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe((data) => {
       console.log(data);
     },
       (error) => {
-
         console.log(error)
-        // console.log(error)
       });
   }
 }

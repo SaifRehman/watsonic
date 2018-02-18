@@ -160,12 +160,11 @@ var HomePage = (function () {
     function HomePage(navCtrl, WatsonVisualRecognition) {
         this.navCtrl = navCtrl;
         this.WatsonVisualRecognition = WatsonVisualRecognition;
-        this.url = "https://loremflickr.com/cache/resized/4473_37419767910_471a2c84e6_q_100_100_nofilter.jpg";
-        this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe(function (data) {
+        this.url = "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg";
+        this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe(function (data) {
             console.log(data);
         }, function (error) {
             console.log(error);
-            // console.log(error)
         });
     }
     HomePage = __decorate([
@@ -371,7 +370,22 @@ var watsonVisualRecognition = (function () {
     watsonVisualRecognition.prototype.getVisualRecognitonDataByOnlyURL = function (url) {
         var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" +
             __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-            "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg" +
+            url +
+            "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
+        var bodyObject = {};
+        var bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.get(link) // ...using post request
+            .map(function (res) {
+            return res;
+        })
+            .catch(function (error) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
+    watsonVisualRecognition.prototype.getVisualRecognitonForFacesDataByOnlyURL = function (url) {
+        var link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=" +
+            __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
+            url +
             "&version=" + __WEBPACK_IMPORTED_MODULE_3__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
         var bodyObject = {};
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
