@@ -30,7 +30,8 @@ export class watsonVisualRecognition {
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
             .map((res) => {
-                return res;
+                console.log('res is ', JSON.parse(res['_body']));
+                return JSON.parse(res['_body']);
             })
             .catch((error: any) => {
                 return Observable.throw(error.json().error || 'Server error');
@@ -47,7 +48,7 @@ export class watsonVisualRecognition {
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
             .map((res) => {
-                return res;
+                return JSON.parse(res['_body']);
             })
             .catch((error: any) => {
                 return Observable.throw(error.json().error || 'Server error');
