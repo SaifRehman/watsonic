@@ -5,7 +5,6 @@ import { WatsonConfig } from './watson.config';
 @Injectable()
 export class watsonAuthService {
     public authorization = new watson.AuthorizationV1({
-        username: WatsonConfig.authUsername,
         password: '<Text to Speech password>',
         url: 'https://stream.watsonplatform.net/authorization/api', // Speech tokens
     });
