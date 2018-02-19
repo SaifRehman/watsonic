@@ -51,7 +51,6 @@ this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).
 ```
 
 ## Watson Language Translator
-1. getVisualRecognitonDataByOnlyURL :-  Classify the image given in the url
 
 ### Watson Language support 
 | Language | Short Terms |
@@ -118,6 +117,9 @@ this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).
 |Ukrainian|uk|
 |Urdu|ur|
 |Vietnamese|vi|
+
+1. getVisualRecognitonDataByOnlyURL :-  Classify the image given in the url
+
 ### Example
 
 ```TypeScript
