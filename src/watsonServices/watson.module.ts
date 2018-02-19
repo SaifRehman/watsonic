@@ -2,7 +2,7 @@ import {  NgModule } from '@angular/core';
 import { watsonAuthService } from './auth.service';
 import { watsonVisualRecognition } from './watsonVisualRecognition.service';
 import { watsonTranslation } from './watsonTranslation.service';
-
+import { watsonToneAnalyzer } from './watsonToneAnalyzer.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { watsonTranslation } from './watsonTranslation.service';
     watsonAuthService,
     watsonVisualRecognition,
     watsonTranslation,
+    watsonToneAnalyzer,
   ]
 })
 export class WatsonModule {}
