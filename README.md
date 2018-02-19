@@ -44,6 +44,71 @@ this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).
 ## Watson Language Translator
 1. getVisualRecognitonDataByOnlyURL :-  Classify the image given in the url
 
+## Watson Language support 
+| Language | Short Terms |
+|----------|-------------|
+|Afrikaans|af|
+|Albanian|sq|
+|Arabic|ar|
+|Armenian	hy
+|Azerbaijani	az
+|Bashkir	ba
+|Basque	eu
+|Belarusian	be
+|Bengali	bn
+|Bosnian	bs
+|Bulgarian	bg
+|Central Khmer	km
+|Chinese	zh
+|Chuvash	cv
+|Czech	cs
+|Danish	da
+|Dutch	nl
+|English	en
+|Esperanto	eo
+|Estonian	et
+|Finnish	fi
+|French	fr
+|Georgian	ka
+|German	de
+|Greek	el
+|Gujarati	gu
+|Haitian	ht
+|Hebrew	he
+|Hindi	hi
+|Hungarian	hu
+|Icelandic	is
+|Indonesian	id
+|Italian	it
+|Japanese	ja
+|Kazakh	kk
+|Kirghiz	ky
+|Korean	ko
+|Kurdish	ku
+|Latvian	lv
+|Lithuanian	lt
+|Malayalam	ml
+|Mongolian	mn
+|Norwegian Bokmal	nb
+|Norwegian Nynorsk	nn
+|Panjabi	pa
+|Persian	fa
+|Polish	pl
+|Portuguese	pt
+|Pushto	ps
+|Romanian	ro
+|Russian	ru
+|Slovakian	sk
+|Somali	so
+|Spanish	es
+|Swedish	sv
+|Tamil	ta
+|Telugu	te
+|Traditional Chinese	zh-TW
+|Turkish	tr
+|Ukrainian	uk
+|Urdu	ur
+|Vietnamese	vi
 ### Example
 
 ```TypeScript
