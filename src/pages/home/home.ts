@@ -25,7 +25,7 @@ export class HomePage {
     //     console.log(error)
     //   })
 
-    this.WatsonToneAnalyzer.analyzeToneOnGivenText('On August 24, shallow volcanic earthquakes began under the summit region. On September 14, after a steam plume was observed above the summit, Indonesia’s Center for Volcanology and Geological Hazard raised the eruption alert level from 1 (normal) to 2 (increased activity but no eruption imminent). On September 18, as the number of volcanic earthquakes became hundreds per day, the Center raised the alert level to 3 (eruption possible within 2 weeks), and then on September 22 to the highest level 4 (eruption possible within 24 hours). This level of earthquake activity at other volcanoes had led to deadly eruptions. More than 150,000 residents fled to one of the makeshift evacuation centers throughout the island, while an additional 30,000 fled to stay with friends or family.').subscribe((data) => {
+    this.WatsonToneAnalyzer.analyzeToneOnGivenTextWithDifferentLanguageResponse('وأوضح أباالخيل أنه تم مؤخرًا، تطبيق الوصف الوظيفي بحسب التصنيف المهني المعياري العربي في البوابة، إذ يتم تعبئة حقل الوصف الوظيفي بشكل آلي عند اختيار المهنة المطلوبة بحسب الوصف الوظيفي في التصنيف، بالإضافة إلى تطبيق آلية الأجر السائد في سوق العمل وفقا للمستوى التعليمي للمهن المطلوبة، ويتم منع الإعلان إذا كان الأجر المدخل أقل من الأجر السائد، ويرتفع الأجر السائد مع زيادة سنوات الخبرة المطلوبة في الإعلان، وفق معايير دقيقة لضبط مدخلات الإعلان عن فرص العمل التي ترغب المنشأة في شغلها بسعوديين وسعوديات، وللتأكد من جدية المنشآت المعلنة','en').subscribe((data) => {
       console.log(data);
     },
       (error) => {
