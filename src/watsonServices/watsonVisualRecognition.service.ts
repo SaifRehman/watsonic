@@ -20,7 +20,7 @@ export class watsonVisualRecognition {
     }
 
     public getVisualRecognitonDataByOnlyURL(url): Observable<any> {
-        const link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" +
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLink +
             WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
             url +
             "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString()
@@ -39,7 +39,7 @@ export class watsonVisualRecognition {
     }
 
     public getVisualRecognitonForFacesDataByOnlyURL(url): Observable<any> {
-        const link = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=" +
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLink +
             WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
             url +
             "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString() + "&threshold=" +

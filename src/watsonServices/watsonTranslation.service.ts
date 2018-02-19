@@ -20,7 +20,7 @@ export class watsonTranslation {
             })
         });
         console.log(token);
-        const link = "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+        const link = WatsonConfig.authURL.watsonTranslation.baseLink;
         const bodyObject = {
             text: text,
             model_id: lang
