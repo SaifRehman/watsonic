@@ -325,8 +325,6 @@ var watsonTranslation = (function () {
     }
     watsonTranslation.prototype.translateToALanguage = function (text, lang) {
         var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.watsonTranslation.authPassword);
-        // let headers = new HttpHeaders({'Content-Type': 'application/json'})
-        //  .set("authorization", auth);
         var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
             headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
                 'Content-Type': 'application/json',

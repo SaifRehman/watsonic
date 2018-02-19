@@ -11,8 +11,6 @@ export class watsonTranslation {
     }
     public translateToALanguage(text, lang): Observable<any> {
         const token = btoa(WatsonConfig.authURL.watsonTranslation.authUsername+":"+WatsonConfig.authURL.watsonTranslation.authPassword)
-        // let headers = new HttpHeaders({'Content-Type': 'application/json'})
-        //  .set("authorization", auth);
         const options = new RequestOptions({
             headers: new Headers({
                 'Content-Type': 'application/json',
