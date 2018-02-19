@@ -1,6 +1,6 @@
 # WATSON IONIC (WORK IN PROGRESS)
 Ionic app with all Watson services.
-![Watson](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvF2rWLci7ydN_6Ac9nyXpjRnRKazIPv-s3cPWlUeO250Ora5g)
+![Watson](https://www.moodleworld.com/wp-content/uploads/2016/11/IBM-watson1.png)
 ## Install Ionic
 ```
 > npm install -g ionic cordova
