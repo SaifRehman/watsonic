@@ -125,5 +125,5 @@ this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe((data) =
 })
 ```
 
-# Special Thanks to 
+# Special Thanks to Walid Abou Ali for the guidance
 - [Walid Abou Ali](https://www.linkedin.com/in/walid-abou-ali-45680a43/)
