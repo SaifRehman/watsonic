@@ -10,6 +10,11 @@ export class WatsonConfig {
             authUsername: "55b4673e-be7d-4d06-9c50-0fd7867b40b2",
             authPassword: "QRGgAh6DY22n",
             baseLink: "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+        },
+        toneAnalyzer:{
+            authUsername: "93eccd0e-13d9-4608-a6b0-adb1ffe368ab",
+            authPassword: "s1TbeXdgMaDB",
+            baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api"
         }
     }
     public  constructor() {

@@ -19,8 +19,9 @@ Ionic app with all Watson services.
 - [ ] Watson Speech to Text
 - [ ] Watson Text to Speech
 - [ ] Watson Natural Language Classifier
-- [ ] Personality Insights
-- [ ] Tone Analyzer
+- [ ] Watson Personality Insights
+- [ ] Watson Tone Analyzer
+- [ ] Watson Knowledge Studio
 
 ## Watson Visual Recognition Service 
 1. getVisualRecognitonDataByOnlyURL :-  Classify the image given in the url
