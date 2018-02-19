@@ -118,7 +118,7 @@ this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).
 |Urdu|ur|
 |Vietnamese|vi|
 
-1. getVisualRecognitonDataByOnlyURL :-  Classify the image given in the url
+1. WatsonTranslation :-  Tranlate given text to a language specified
 
 ### Example
 
