@@ -1,4 +1,4 @@
-### watsonic
+# watsonic
 Ionic app with all Watson services.
 ![Watson](https://www.moodleworld.com/wp-content/uploads/2016/11/IBM-watson1.png)
 ## Install Ionic
