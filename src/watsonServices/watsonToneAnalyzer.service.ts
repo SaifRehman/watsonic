@@ -18,10 +18,9 @@ export class watsonToneAnalyzer {
                 'Authorization': `Basic ${token}`
             })
         });
-        const link = WatsonConfig.authURL.toneAnalyzer.baseLink;
+        const link = WatsonConfig.authURL.toneAnalyzer.baseLink + WatsonConfig.authURL.toneAnalyzer.version_date;
         const bodyObject = {
-            tone_input: text,
-            version: WatsonConfig.authURL.toneAnalyzer.version_date
+            text: text
         };
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link, bodyObject, options) // ...using post request

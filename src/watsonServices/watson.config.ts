@@ -14,7 +14,7 @@ export class WatsonConfig {
         toneAnalyzer:{
             authUsername: "93eccd0e-13d9-4608-a6b0-adb1ffe368ab",
             authPassword: "s1TbeXdgMaDB",
-            baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api",
+            baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=",
             version_date: "2017-09-21"
         }
     }
