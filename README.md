@@ -5,6 +5,11 @@ Ionic app with all Watson services.
 ```
 > npm install -g ionic cordova
 ```
+## Run The Application
+```
+> git clone https://github.com/SaifRehman/watsonic.git
+> ionic serve
+```
 ### Watson Services Completed for this framework
 - [x] Watson Visual Recognition
 - [x] Watson Language Translator
