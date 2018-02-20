@@ -1,11 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      {{show}}
     </ion-title>
   </ion-navbar>
+
+
 </ion-header>
 
 <ion-content padding>
-  <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">
 </ion-content>

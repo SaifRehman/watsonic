@@ -179,7 +179,6 @@ webpackEmptyAsyncContext.id = 305;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonToneAnalyzer_service__ = __webpack_require__(515);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -193,41 +192,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var HomePage = (function () {
-    function HomePage(navCtrl, WatsonVisualRecognition, WatsonTranslation, WatsonToneAnalyzer) {
-        // this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe((data) => {
-        //   console.log('data', data);
-        // },
-        //   (error) => {
-        //     console.log(error)
-        //   });
-        // this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe((data) => {
-        //   console.log(data);
-        // },
-        //   (error) => {
-        //     console.log(error)
-        //   })
+    function HomePage(navCtrl, WatsonVisualRecognition, WatsonTranslation) {
         this.navCtrl = navCtrl;
         this.WatsonVisualRecognition = WatsonVisualRecognition;
         this.WatsonTranslation = WatsonTranslation;
-        this.WatsonToneAnalyzer = WatsonToneAnalyzer;
+        this.show = "nothing";
+        this.randomImage = "https://loremflickr.com/200/200";
         this.url = "http://lorempixel.com/100/100/";
-        // this.WatsonToneAnalyzer.analyzeToneOnGivenText('On August 24, shallow volcanic earthquakes began under the summit region. On September 14, after a steam plume was observed above the summit, Indonesia’s Center for Volcanology and Geological Hazard raised the eruption alert level from 1 (normal) to 2 (increased activity but no eruption imminent). On September 18, as the number of volcanic earthquakes became hundreds per day, the Center raised the alert level to 3 (eruption possible within 2 weeks), and then on September 22 to the highest level 4 (eruption possible within 24 hours). This level of earthquake activity at other volcanoes had led to deadly eruptions. More than 150,000 residents fled to one of the makeshift evacuation centers throughout the island, while an additional 30,000 fled to stay with friends or family.').subscribe((data) => {
-        //   console.log(data);
-        // },
-        //   (error) => {
-        //     console.log(error)
-        //   })
     }
+    HomePage.prototype.doRefresh = function (refresher) {
+        var _this = this;
+        this.randomImage = "https://loremflickr.com/200/200";
+        this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.randomImage).subscribe(function (data) {
+            console.log('data', data);
+            refresher.complete();
+            _this.show = data['images'][0]['classifiers'][0]['classes'][0]['class'];
+            _this.WatsonTranslation.translateToALanguage(_this.show, 'en-ar').subscribe(function (data) {
+                _this.show = data['translations'][0]['translation'];
+            }, function (error) {
+                console.log(error);
+            });
+        }, function (error) {
+            console.log(error);
+            refresher.complete();
+        });
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{show}}\n    </ion-title>\n  </ion-navbar>\n\n\n</ion-header>\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */],
-            __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */], __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonToneAnalyzer_service__["a" /* watsonToneAnalyzer */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
