@@ -5,30 +5,55 @@
     (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='4.1.2';i.staticDir='build/';})(window);
   </script>
   <meta charset="UTF-8">
-  <title>Ionic App</title>
+  <title>Watsonic</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
+  <meta name="theme-color" content="#FFFFFF">
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="Watson Services for Ionic">
+  <meta name="keywords" content="Watson, IBM, Cognitive, AI, Ionic, NodeJS, Node SDK">
+  <meta httpEquiv="cleartype" content="on">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+        
+  <!-- add apple settings -->
+  <meta name="apple-mobile-web-app-title" content="Watsonic">
+  <meta name="apple-mobile-web-app-capable" content="Yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+  <!-- add apple launch screens -->
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px)    (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-640x1136.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-750x1334.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-1242x2208.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-1125x2436.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-1536x2048.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-1668x2224.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/launch/apple-touch-startup-image-2048x2732.png">
+        
+  <!-- add apple icons -->
+  <link rel="apple-touch-icon" href="assets/touch/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/touch/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/touch/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/touch/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/touch/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/touch/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/touch/apple-touch-icon-152x152.png">
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
-  <!-- un-comment this code to enable service worker
+  <!-- un-comment this code to enable service worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('service worker installed'))
         .catch(err => console.error('Error', err));
     }
-  </script>-->
+  </script>
 
   <link href="build/main.css" rel="stylesheet">
 
