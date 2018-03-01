@@ -12,8 +12,8 @@ Ionic app with all Watson services.
 ```
 ### Watson Services Completed for this framework
 - [x] Watson Visual Recognition
-- [x] Watson Language Translator
-- [x] Watson Tone Analyzer
+- [ ] Watson Language Translator
+- [ ] Watson Tone Analyzer
 - [ ] Watson Conversation
 - [ ] Watson Discovery
 - [ ] Watson Natural Language Understanding
