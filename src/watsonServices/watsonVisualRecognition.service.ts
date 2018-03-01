@@ -1,16 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import * as watson from 'watson-developer-cloud';
 import * as fs from 'fs';
 import { WatsonConfig } from './watson.config';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
 @Injectable()
 export class watsonVisualRecognition {
-    public visualRecognition = new watson.VisualRecognitionV3({
-        api_key: WatsonConfig.authURL.wantsonVisualRecognition.api_key,
-        version_date: WatsonConfig.authURL.wantsonVisualRecognition.version_date,
-    });
-
     public parameters: any;
     public params: any;
 
