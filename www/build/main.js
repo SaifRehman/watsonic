@@ -199,7 +199,7 @@ var WatsonConfig = (function () {
             version_date: "2016-05-20",
             threshold: 0,
             baseLinkClassify: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=",
-            baseLinkClassifyFace: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key="
+            baseLinkClassifyFace: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key="
         },
         watsonTranslation: {
             authUsername: "55b4673e-be7d-4d06-9c50-0fd7867b40b2",
@@ -284,7 +284,7 @@ var HomePage = (function () {
         this.show = "nothing";
         this.randomImage = "https://loremflickr.com/200/200";
         this.url = "http://lorempixel.com/100/100/";
-        this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.randomImage).subscribe(function (data) {
+        this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL('http://www.abc.net.au/news/image/4865042-3x2-940x627.jpg').subscribe(function (data) {
             console.log(data);
         }, function (error) {
             console.log(error);
