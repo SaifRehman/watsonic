@@ -18,6 +18,4 @@ export class HomePage {
         console.log(error)
       });
   }
-
-
 }
