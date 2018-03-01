@@ -11,7 +11,7 @@ export class HomePage {
   public randomImage: string = "https://loremflickr.com/200/200"
   public url: string = "http://lorempixel.com/100/100/";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition: watsonVisualRecognition, public WatsonTranslation: watsonTranslation) {
-    this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.randomImage).subscribe((data) => {
+    this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.randomImage).subscribe((data) => {
       console.log(data);
     },
       (error) => {
