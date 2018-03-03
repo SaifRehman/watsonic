@@ -36,6 +36,7 @@
     "memory-fs": "^0.4.1",
     "rxjs": "^5.5.2",
     "sw-toolbox": "3.6.0",
+    "watson-developer-cloud": "^3.0.7",
     "zone.js": "0.8.18"
   },
   "devDependencies": {

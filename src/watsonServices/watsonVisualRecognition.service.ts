@@ -84,16 +84,15 @@ export class watsonVisualRecognition {
                         console.log(data);
                     });
             const bodyObject = {
-            // name:'dogs', 
-            // beagle_positive_examples: fs.,
-            // goldenretriever_positive_examples: createReadStream('golden-retriever.zip'),
-            // husky_positive_examples: createReadStream('husky.zip'),
-            // negative_examples: createReadStream('cats.zip')
+             name:'dogs', 
+             beagle_positive_examples: open('../assets/data/beagle.zip', "rb"),
+            goldenretriever_positive_examples:  open('../assets/data/golden-retriever.zip', "rb"),
+            husky_positive_examples:  open('../assets/data/husky.zip', "rb"),
+            negative_examples: open('../assets/data/cats.zip', "rb")
         };
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         const options = new RequestOptions({
             headers: new Headers({
-                'Content-Type': 'application/json'
             })
         });
         return this.http.post(link, bodyObject, options) // ...using post request
