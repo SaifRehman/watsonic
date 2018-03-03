@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import * as fs from 'browserify-fs';
-// import { createReadStream } from 'fs';
-
-
 import { WatsonConfig } from './watson.config';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
 import { error } from 'util';
