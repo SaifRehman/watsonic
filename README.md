@@ -103,6 +103,8 @@ this.WatsonVisualRecognition.getClassifiersDetails(classifier).subscribe((data) 
 
 6. deleteClassifiers :- Delete a created classifer 
 
+### Example
+
 ```TypeScript
 import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.deleteClassifiers(classifier).subscribe((data) => {
