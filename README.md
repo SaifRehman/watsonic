@@ -25,8 +25,8 @@ Contributions of any kind welcome!
 ```
 ### Watson Services Completed for this framework
 - [x] Watson Visual Recognition
-- [ ] Watson Language Translator
-- [ ] Watson Tone Analyzer
+- [x] Watson Language Translator
+- [x] Watson Tone Analyzer
 - [ ] Watson Conversation
 - [ ] Watson Discovery
 - [ ] Watson Natural Language Understanding
@@ -57,6 +57,59 @@ this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscrib
 ```TypeScript
 import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe((data) => {
+    console.log('data', data);
+},
+(error) => {
+    console.log(error)
+});
+```
+3. getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly :- Get only confidence result 
+
+### Example
+
+```TypeScript
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.url).subscribe((data) => {
+    console.log('data', data);
+},
+(error) => {
+    console.log(error)
+});
+```
+
+4. getListOfCustomCreatedClassifiers :- Get list of created classifiers
+
+### Example
+
+```TypeScript
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+this.WatsonVisualRecognition.getListOfCustomCreatedClassifiers().subscribe((data) => {
+    console.log('data', data);
+},
+(error) => {
+    console.log(error)
+});
+```
+
+5. getClassifiersDetails :- Get detail of a classifier created
+
+### Example
+
+```TypeScript
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+this.WatsonVisualRecognition.getClassifiersDetails(classifier).subscribe((data) => {
+    console.log('data', data);
+},
+(error) => {
+    console.log(error)
+});
+```
+
+6. deleteClassifiers :- Delete a created classifer 
+
+```TypeScript
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+this.WatsonVisualRecognition.deleteClassifiers(classifier).subscribe((data) => {
     console.log('data', data);
 },
 (error) => {
