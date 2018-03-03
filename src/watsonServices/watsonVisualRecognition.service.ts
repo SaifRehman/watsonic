@@ -59,44 +59,13 @@ export class watsonVisualRecognition {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
-    public getVisualRecognitonForFacesDataByOnlyURL(url): Observable<any> {
-        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLinkClassifyFace +
-            WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-            url +
-            "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString() + "&threshold=" +
-            WatsonConfig.authURL.wantsonVisualRecognition.threshold.toString();
-        const bodyObject = {};
-        const bodyString = JSON.stringify(bodyObject); // Stringify payload
-        return this.http.get(link) // ...using post request
-            .map((res) => {
-                return JSON.parse(res['_body']);
-            })
-            .catch((error: any) => {
-                return Observable.throw(error.json().error || 'Server error');
-            });
-    }
-
-    public createClassifiersFromGivenFiles(): Observable<any> {
+    public getListOfCustomCreatedClassifiers(): Observable<any> {
         const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLinkClassifier +
             WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + 
             "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
-                    fs.readFile('./cats.zip', function(err, data) {
-                        console.log(data);
-                    });
-            const bodyObject = {
-            // name:'dogs', 
-            // beagle_positive_examples: fs.,
-            // goldenretriever_positive_examples: createReadStream('golden-retriever.zip'),
-            // husky_positive_examples: createReadStream('husky.zip'),
-            // negative_examples: createReadStream('cats.zip')
-        };
+        const bodyObject = {};
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
-        const options = new RequestOptions({
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
-        });
-        return this.http.post(link, bodyObject, options) // ...using post request
+        return this.http.get(link) // ...using post request
             .map((res) => {
                 return JSON.parse(res['_body']);
             })
