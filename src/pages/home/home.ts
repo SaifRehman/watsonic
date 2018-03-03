@@ -11,7 +11,7 @@ export class HomePage {
   public randomImage: string = "https://loremflickr.com/200/200"
   public url: string = "http://lorempixel.com/100/100/";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition: watsonVisualRecognition, public WatsonTranslation: watsonTranslation) {
-    this.WatsonVisualRecognition.createClassifiersFromGivenFiles().subscribe((data) => {
+    this.WatsonVisualRecognition.getClassifiersDetails('dogs_697818401').subscribe((data) => {
       console.log(data);
     },
       (error) => {

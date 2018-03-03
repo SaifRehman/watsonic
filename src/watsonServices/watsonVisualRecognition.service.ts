@@ -59,12 +59,10 @@ export class watsonVisualRecognition {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
-    public getVisualRecognitonForFacesDataByOnlyURL(url): Observable<any> {
-        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLinkClassifyFace +
-            WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + "&url=" +
-            url +
-            "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString() + "&threshold=" +
-            WatsonConfig.authURL.wantsonVisualRecognition.threshold.toString();
+    public getListOfCustomCreatedClassifiers(): Observable<any> {
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLinkClassifier +
+            WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + 
+            "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
         const bodyObject = {};
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
@@ -76,26 +74,26 @@ export class watsonVisualRecognition {
             });
     }
 
-    public createClassifiersFromGivenFiles(): Observable<any> {
-        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLinkClassifier +
-            WatsonConfig.authURL.wantsonVisualRecognition.api_key.toString() + 
-            "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
-                    fs.readFile('./cats.zip', function(err, data) {
-                        console.log(data);
-                    });
-            const bodyObject = {
-             name:'dogs', 
-             beagle_positive_examples: open('../assets/data/beagle.zip', "rb"),
-            goldenretriever_positive_examples:  open('../assets/data/golden-retriever.zip', "rb"),
-            husky_positive_examples:  open('../assets/data/husky.zip', "rb"),
-            negative_examples: open('../assets/data/cats.zip', "rb")
-        };
+    public getClassifiersDetails(classifier): Observable<any> {
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLink + classifier + '?api_key=' + WatsonConfig.authURL.wantsonVisualRecognition
+        .api_key + "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
+        const bodyObject = {};
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
-        const options = new RequestOptions({
-            headers: new Headers({
+        return this.http.get(link) // ...using post request
+            .map((res) => {
+                return JSON.parse(res['_body']);
             })
-        });
-        return this.http.post(link, bodyObject, options) // ...using post request
+            .catch((error: any) => {
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
+
+    public deleteClassifiers(classifier): Observable<any> {
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLink + classifier + '?api_key=' + WatsonConfig.authURL.wantsonVisualRecognition
+        .api_key + "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
+        const bodyObject = {};
+        const bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.delete(link) // ...using post request
             .map((res) => {
                 return JSON.parse(res['_body']);
             })
@@ -104,6 +102,3 @@ export class watsonVisualRecognition {
             });
     }
 }
-
-// creating custom classifers
-
