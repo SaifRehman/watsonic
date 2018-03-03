@@ -1,6 +1,6 @@
 # WATSON IONIC (WORK IN PROGRESS)
 Ionic app with all Watson services.
-![Watson](https://www.moodleworld.com/wp-content/uploads/2016/11/IBM-watson1.png)
+![Watson](https://www.ibm.com/blogs/watson/wp-content/uploads/2017/04/B_card.png)
 
 
 ## Contributors
