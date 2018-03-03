@@ -87,6 +87,20 @@ export class watsonVisualRecognition {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
+
+    public deleteClassifiers(classifier): Observable<any> {
+        const link = WatsonConfig.authURL.wantsonVisualRecognition.baseLink + classifier + '?api_key=' + WatsonConfig.authURL.wantsonVisualRecognition
+        .api_key + "&version=" + WatsonConfig.authURL.wantsonVisualRecognition.version_date.toString();
+        const bodyObject = {};
+        const bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.delete(link) // ...using post request
+            .map((res) => {
+                return JSON.parse(res['_body']);
+            })
+            .catch((error: any) => {
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
 }
 
 // creating custom classifers
