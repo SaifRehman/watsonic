@@ -2,7 +2,7 @@
 ![Watson](https://www.mindinventory.com/blog/wp-content/uploads/2016/06/angularjs-ionic.png)
 
 
-# IBM Watson support for Angular/Typescript/Ionic
+## IBM Watson support for Angular/Typescript/Ionic
 ## Contributors
 
 | [<img src="https://pbs.twimg.com/profile_images/969598365716635648/-E0SfuGA_400x400.jpg" width="100px;"/><br /><sub><b>SaifRehman</b></sub>](https://www.linkedin.com/in/saif-ur-rehman/)<br />[💻](https://github.com/SaifRehman/watsonic/commits?author=SaifRehman "Code") [📖](https://github.com/SaifRehman/watsonic/commits?author=SaifRehman "Documentation") [🤔](#ideas-keppel "Ideas, Planning, & Feedback") [⚠️](https://github.com/SaifRehman/watsonic/commits?author=SaifRehman "Tests") | [<img src="https://pbs.twimg.com/profile_images/964820643651956736/6gLfdbbR_400x400.jpg" width="100px;"/><br /><sub><b>AreejEssa</b></sub>](https://www.linkedin.com/in/areej-essa-b19336114/)<br />[💻](https://github.com/SaifRehman/watsonic/commits?author=AreejEssa "Code") [🤔](#ideas-mappum "Ideas, Planning, & Feedback") [⚠️](https://github.com/SaifRehman/watsonic/commits?author=AreejEssa "Tests") [🔌](#plugin-mappum "Plugin/utility libraries") | [<img src="https://avatars3.githubusercontent.com/u/6966801?s=460&v=4" width="100px;"/><br /><sub><b>HebaShimy</b></sub>](https://www.linkedin.com/in/hebaelshimy/)<br />[🎨](https://github.com/SaifRehman/watsonic/commits?author=HebaNAS "Code") [📖](https://github.com/SaifRehman/watsonic/commits?author=HebaNAS "Documentation") [🤔](#ideas-keppel "Ideas, Planning, & Feedback") [⚠️](https://github.com/SaifRehman/watsonic/commits?author=HebaNAS "Tests") |
