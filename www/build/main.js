@@ -246,7 +246,6 @@ var watsonVisualRecognition = (function () {
     var _a;
 }());
 
-// creating custom classifers
 //# sourceMappingURL=watsonVisualRecognition.service.js.map
 
 /***/ }),

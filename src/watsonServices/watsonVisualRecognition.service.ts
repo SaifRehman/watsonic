@@ -102,6 +102,3 @@ export class watsonVisualRecognition {
             });
     }
 }
-
-// creating custom classifers
-
