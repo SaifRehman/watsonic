@@ -1,7 +1,5 @@
 # WATSON IONIC (WORK IN PROGRESS)
-Ionic app with all Watson services.
 ![Watson](https://www.ibm.com/blogs/watson/wp-content/uploads/2017/04/B_card.png)
-
 
 ## Contributors
 
