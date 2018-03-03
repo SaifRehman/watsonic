@@ -15,7 +15,8 @@ var WatsonConfig = (function () {
             threshold: 0,
             baseLinkClassify: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=",
             baseLinkClassifyFace: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=",
-            baseLinkClassifier: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key="
+            baseLinkClassifier: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key=",
+            baseLink: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/"
         },
         watsonTranslation: {
             authUsername: "55b4673e-be7d-4d06-9c50-0fd7867b40b2",
@@ -100,7 +101,7 @@ var HomePage = (function () {
         this.show = "nothing";
         this.randomImage = "https://loremflickr.com/200/200";
         this.url = "http://lorempixel.com/100/100/";
-        this.WatsonVisualRecognition.getListOfCustomCreatedClassifiers().subscribe(function (data) {
+        this.WatsonVisualRecognition.getClassifiersDetails('dogs_697818401').subscribe(function (data) {
             console.log(data);
         }, function (error) {
             console.log(error);
@@ -110,9 +111,10 @@ var HomePage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{show}}\n    </ion-title>\n  </ion-navbar>\n\n\n</ion-header>\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */], __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -210,11 +212,25 @@ var watsonVisualRecognition = (function () {
             return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
         });
     };
+    watsonVisualRecognition.prototype.getClassifiersDetails = function (classifier) {
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.baseLink + classifier + '?api_key=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition
+            .api_key + "&version=" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
+        var bodyObject = {};
+        var bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.get(link) // ...using post request
+            .map(function (res) {
+            return JSON.parse(res['_body']);
+        })
+            .catch(function (error) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
     watsonVisualRecognition = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
     ], watsonVisualRecognition);
     return watsonVisualRecognition;
+    var _a;
 }());
 
 // creating custom classifers
