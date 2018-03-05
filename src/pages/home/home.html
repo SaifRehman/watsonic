@@ -5,12 +5,13 @@
     </ion-title>
   </ion-navbar>
 
-
 </ion-header>
 
 <ion-content padding>
-    <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content></ion-refresher-content>
-      </ion-refresher>
-  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div style="display:table-cell; vertical-align:middle; text-align:center">
+    <img src={{randomImage}} alt="HTML5 Icon" width="400" height="400">
+  </div>
 </ion-content>

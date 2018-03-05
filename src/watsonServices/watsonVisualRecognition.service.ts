@@ -45,12 +45,21 @@ export class watsonVisualRecognition {
                 console.log('res issssss ', JSON.parse(res['_body']));
                 this.temp = JSON.parse(res['_body']);
                 console.log('temmppppp is',this.temp['images'][0]['classifiers'][0]['classes'][0]);
-                if ( this.temp['images'][0]['classifiers'][0]['classes'][0]){
-                    return this.temp['images'][0]['classifiers'][0]['classes'][0];
+                for (var i = 0; i < this.temp['images'][0]['classifiers'][0]['classes'].length; i++) {
+                    if(i===0){
+                        var store = this.temp['images'][0]['classifiers'][0]['classes'][i];
+                        console.log(store);
+                    }
+                    else{
+                        console.log(this.temp['images'][0]['classifiers'][0]['classes'][i]['score']);
+                        if(store['score']<this.temp['images'][0]['classifiers'][0]['classes'][i]['score'])
+                        {
+                            store = this.temp['images'][0]['classifiers'][0]['classes'][i];
+                            console.log('updated store val isss', store);
+                        }
+                    }
                 }
-                else{
-                    throw error;
-                }
+                return store;
             })
             .catch((error: any) => {
                 return Observable.throw(error.json().error || 'Server error');
