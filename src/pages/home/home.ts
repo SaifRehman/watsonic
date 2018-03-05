@@ -16,12 +16,12 @@ export class HomePage {
   doRefresh(refresher) {
     this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.url).subscribe((data) => {
       console.log('data', data);
+      this.show = data['class'];
       refresher.complete();
     },
       (error) => {
         console.log(error);
         refresher.complete();
       });
-    // location.reload();
   }
 }

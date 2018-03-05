@@ -103,14 +103,15 @@ var HomePage = (function () {
         this.url = "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/144966156-adoptable-cat-photo-tips-632x475.jpg";
     }
     HomePage.prototype.doRefresh = function (refresher) {
+        var _this = this;
         this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.url).subscribe(function (data) {
             console.log('data', data);
+            _this.show = data['class'];
             refresher.complete();
         }, function (error) {
             console.log(error);
             refresher.complete();
         });
-        // location.reload();
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
