@@ -116,7 +116,7 @@ this.WatsonVisualRecognition.deleteClassifiers(classifier).subscribe((data) => {
 ```
 7. UI Example of Watson Visual Recognition
 
-<!-- ![ibm](ibm.png) -->
+![1](1.png)
 
 ## Watson Language Translator
 
