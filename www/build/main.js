@@ -28,7 +28,7 @@ var WatsonConfig = (function () {
             authPassword: "s1TbeXdgMaDB",
             baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=",
             version_date: "2017-09-21"
-        }
+        },
     };
     return WatsonConfig;
 }());
@@ -160,11 +160,8 @@ var watsonVisualRecognition = (function () {
             "&version=" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString()
             + "&threshold=" +
             __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.threshold.toString();
-        var bodyObject = {};
-        var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.get(link) // ...using post request
             .map(function (res) {
-            console.log('res is ', JSON.parse(res['_body']));
             return JSON.parse(res['_body']);
         })
             .catch(function (error) {
@@ -227,9 +224,7 @@ var watsonVisualRecognition = (function () {
     watsonVisualRecognition.prototype.deleteClassifiers = function (classifier) {
         var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.baseLink + classifier + '?api_key=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition
             .api_key + "&version=" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.wantsonVisualRecognition.version_date.toString();
-        var bodyObject = {};
-        var bodyString = JSON.stringify(bodyObject); // Stringify payload
-        return this.http.delete(link) // ...using post request
+        return this.http.delete(link)
             .map(function (res) {
             return JSON.parse(res['_body']);
         })
