@@ -239,7 +239,7 @@ var watsonConversation = (function () {
                 'Authorization': "Basic " + token
             })
         });
-        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + +'?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + '?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
         var bodyObject = {
             name: name,
             intents: intents,
@@ -308,6 +308,28 @@ var watsonConversation = (function () {
             language: language,
             description: description,
             dialog_nodes: dialog_nodes,
+        };
+        var bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.post(link, bodyString, options) // ...using post request
+            .map(function (res) { return res.json(); })
+            .catch(function (error) {
+            console.log(error);
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
+    watsonConversation.prototype.sendMessage = function (text, workspaceid) {
+        var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authPassword);
+        var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
+            headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json',
+                'Authorization': "Basic " + token
+            })
+        });
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + '/' + workspaceid + 'message' + '?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        var bodyObject = {
+            input: {
+                text: text,
+            }
         };
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link, bodyString, options) // ...using post request
