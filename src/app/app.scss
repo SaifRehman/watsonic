@@ -14,3 +14,28 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+body {
+  @include reset;
+  font-family: 'ibm-plex-sans', 'Helvetica Neue', Arial, sans-serif;
+  color: $text-01;
+  //background-color: $ui-02;
+  line-height: 1;
+}
+
+.bg-transparent {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.top-left-0 {
+  top: 0;
+  left: 0;
+}

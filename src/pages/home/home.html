@@ -1,6 +1,49 @@
+<ion-header>
+    <ion-navbar class="height-40px bg-transparent bx--cloud-header__wrapper">
+        <div class="">
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>              
+            <ion-title class="">
+                <div>
+                    <h2 class="bx--cloud-header-brand__text">{{appTitle}}</h2>
+                </div>
+            </ion-title>
+        </div>
+    </ion-navbar>
+</ion-header>
+
 <ion-content padding>
+
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
-      </ion-refresher>
-  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">
+    </ion-refresher>
+
+    <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:100%;height:100%;background:transparent;">
+        <div class="flex flex-column">
+            <video class="" autoplay="" data-playtimes="100" style="width:102%;height:auto;" loop>
+                <source src="{{watsonVideo}}" type="video/mp4">
+                <img src="{{watsonLogo}}" title="Your browser does not support the video tag">
+            </video>
+        </div>
+    </div>
+    
+    <!--<h4 class="text-center">Please pick one of the services below to see its demo and details</h4>-->
+    
+
+    <article class="bx--card" tabindex="0" aria-labelledby="card-title-2">
+        <div class="bx--card__card-overview">
+            <section class="bx--card-overview__about">
+                <figure class="bx--about__icon">
+                    <img src="{{visualRecognition}}" alt="" class="bx--about__icon--img" />
+                </figure>
+                <header class="bx--about__title">
+                    <p id="card-title-2" class="bx--about__title--name bx--type-gamma" title="Card Name">Visual Recognition</p>
+                    <p class="bx--about__title--additional-info bx--type-delta">Click for More Info</p>
+                </header>
+            </section>
+        </div>
+    </article>
+          
+    <!-- <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200"> -->
 </ion-content>

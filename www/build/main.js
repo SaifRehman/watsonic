@@ -281,6 +281,10 @@ var HomePage = (function () {
         this.WatsonVisualRecognition = WatsonVisualRecognition;
         this.WatsonTranslation = WatsonTranslation;
         this.show = "nothing";
+        this.appTitle = "Watsonic";
+        this.watsonLogo = "../../assets/imgs/brand.jpg";
+        this.watsonVideo = "../../assets/videos/IBM Watson_ Ambient (1).mp4";
+        this.visualRecognition = "../../assets/imgs/visual_recognition.svg";
         this.randomImage = "https://loremflickr.com/200/200";
         this.url = "http://lorempixel.com/100/100/";
     }
@@ -303,7 +307,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/Heba/Development/Watsonic/src/pages/home/home.html"*/'<ion-content padding>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n  <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200">\n</ion-content>\n'/*ion-inline-end:"/Users/Heba/Development/Watsonic/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Heba/Development/Watsonic/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar class="height-40px bg-transparent bx--cloud-header__wrapper">\n        <div class="">\n            <button ion-button menuToggle>\n                <ion-icon name="menu"></ion-icon>\n            </button>              \n            <ion-title class="">\n                <div>\n                    <h2 class="bx--cloud-header-brand__text">{{appTitle}}</h2>\n                </div>\n            </ion-title>\n        </div>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n    </ion-refresher>\n\n    <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:100%;height:100%;background:transparent;">\n        <div class="flex flex-column">\n            <video class="" autoplay="" data-playtimes="100" style="width:102%;height:auto;" loop>\n                <source src="{{watsonVideo}}" type="video/mp4">\n                <img src="{{watsonLogo}}" title="Your browser does not support the video tag">\n            </video>\n        </div>\n    </div>\n    \n    <!--<h4 class="text-center">Please pick one of the services below to see its demo and details</h4>-->\n    \n\n    <article class="bx--card" tabindex="0" aria-labelledby="card-title-2">\n        <div class="bx--card__card-overview">\n            <section class="bx--card-overview__about">\n                <figure class="bx--about__icon">\n                    <img src="{{visualRecognition}}" alt="" class="bx--about__icon--img" />\n                </figure>\n                <header class="bx--about__title">\n                    <p id="card-title-2" class="bx--about__title--name bx--type-gamma" title="Card Name">Visual Recognition</p>\n                    <p class="bx--about__title--additional-info bx--type-delta">Click for More Info</p>\n                </header>\n            </section>\n        </div>\n    </article>\n          \n    <!-- <img src={{randomImage}} alt="HTML5 Icon" width="200" height="200"> -->\n</ion-content>\n'/*ion-inline-end:"/Users/Heba/Development/Watsonic/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_service__["a" /* watsonTranslation */]) === "function" && _c || Object])
     ], HomePage);
@@ -545,8 +549,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -559,26 +562,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+//import { SplashScreen } from '@ionic-native/splash-screen';
+//import { MenuController } from 'ionic-angular';
 
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
-        this.appTitle = "Watsonic";
+    function MyApp(platform, statusBar) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_3__pages_home_home__["a" /* HomePage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
-            splashScreen.hide();
+            //splashScreen.hide();
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Heba/Development/Watsonic/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{appTitle}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n'/*ion-inline-end:"/Users/Heba/Development/Watsonic/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Heba/Development/Watsonic/src/app/app.html"*/'<ion-nav [root]="rootPage" #nav swipeBackEnabled="false"></ion-nav>\n\n<!-- <ion-menu [content]="nav">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu> -->\n'/*ion-inline-end:"/Users/Heba/Development/Watsonic/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=app.component.js.map
