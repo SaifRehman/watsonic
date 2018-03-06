@@ -23,7 +23,7 @@ Contributions of any kind welcome!
 - [x] Watson Visual Recognition
 - [x] Watson Language Translator
 - [x] Watson Tone Analyzer
-- [ ] Watson Conversation (In Progress)
+- [x] Watson Conversation (Test Progress)
 - [ ] Watson Discovery
 - [ ] Watson Natural Language Understanding
 - [ ] Watson Speech to Text
