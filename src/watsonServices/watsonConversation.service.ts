@@ -179,7 +179,7 @@ export class watsonConversation {
             });
     }
 
-    public deleteCounterExamples(workspaceid): Observable<any> {
+    public deleteCounterExamples(workspaceid,text): Observable<any> {
         const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
         const options = new RequestOptions({
             headers: new Headers({
@@ -189,7 +189,7 @@ export class watsonConversation {
             })
         });
         const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'counterexamples' +
-         '?version=' + WatsonConfig.authURL.conversation.version_date;
+        + '/'+ text + '?version=' + WatsonConfig.authURL.conversation.version_date;
         return this.http.delete(link,options) // ...using post request
             .map((res: Response) => res.json())
             .catch((error: any) => {
@@ -280,4 +280,22 @@ export class watsonConversation {
             });
     }
 
+    public deleteEntity(workspaceid,entity): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`,
+                'Accept': ' text/html'
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'counterexamples' +
+        + '/entities/'+ entity + '?version=' + WatsonConfig.authURL.conversation.version_date;
+        return this.http.delete(link,options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
 }
