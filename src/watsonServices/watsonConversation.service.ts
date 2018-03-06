@@ -298,4 +298,22 @@ export class watsonConversation {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
+
+    public getEntity (workspaceid,entity): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'entities' + '/' + entity +
+        '?version=' + WatsonConfig.authURL.conversation.version_date;
+        return this.http.get(link, options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
 }
