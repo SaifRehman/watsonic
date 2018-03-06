@@ -23,16 +23,21 @@ body {
   line-height: 1;
 }
 
-.bg-transparent {
-  background-color: rgba(255, 255, 255, 0) !important;
+ion-header {
+  .toolbar.bg-transparent {
+    position: absolute;
+
+    .toolbar-background {
+      background: transparent;
+    }
+    .toolbar-title {
+      color: color($colors, ui-04);
+    }
+  }
 }
 
 .position-absolute {
   position: absolute;
-}
-
-.position-relative {
-  position: relative;
 }
 
 .top-left-0 {

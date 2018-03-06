@@ -12,7 +12,7 @@
 //$app-direction: ltr;
 
 
-//@import "ionic.globals";
+@import "ionic.globals";
 
 
 // Shared Variables
@@ -21,7 +21,7 @@
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
+$toolbar-height: 40px;
 
 
 
@@ -33,33 +33,50 @@
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-// $colors: (
-//   primary:    #488aff,
-//   secondary:  #32db64,
-//   danger:     #f53d3d,
-//   light:      #f4f4f4,
-//   dark:       #222
-// );
+$colors: (
+  primary:    rgba(0, 0, 0, 0),
+  brand-01:   #3d70b2,
+  brand-02:   #5596e6,
+  brand-03:   #41d6c3,
+  ui-01:      #ffffff,
+  ui-02:      #f5f7fa,
+  ui-03:      #f0f3f6,
+  ui-04:      #dfe3e6,
+  ui-05:      #8c9ba5,
+  text-01:    #152934,
+  text-02:    #5a6872,
+  text-03:    #5a6872,
+  inverse-01: #ffffff,
+  field-01:   rgba(60, 112, 178, .1),
+  support-01: #e0182d,
+  support-02: #5aa700,
+  support-03: #efc100,
+  support-04: #5aaafa
+);
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
-
+$toolbar-ios-height: $toolbar-height;
+$navbar-ios-height: $toolbar-ios-height;
+$toolbar-background-ios: color($colors, primary);
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$toolbar-md-height: $toolbar-height;
+$navbar-md-height: $toolbar-md-height;
+$toolbar-background-md: color($colors, primary);
 
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
+$toolbar-wp-height: $toolbar-height;
+$navbar-wp-height: $toolbar-wp-height;
+$toolbar-background-wp: color($colors, primary);
 
 
 
@@ -70,7 +87,7 @@
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-//@import "ionic.theme.default";
+@import "ionic.theme.default";
 
 
 // Ionicons
@@ -89,3 +106,5 @@
 
 @import 'node_modules/carbon-components/scss/globals/scss/styles';
 $css--plex: true;
+
+$status-bar-color: rgba(0, 0, 0, 0);

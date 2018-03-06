@@ -10,10 +10,10 @@ export class HomePage {
   public show:any="nothing";
   public appTitle:any="Watsonic";
   public watsonLogo:any="../../assets/imgs/brand.jpg";
-  public watsonVideo:any="../../assets/videos/IBM Watson_ Ambient (1).mp4"
-  public visualRecognition:any="../../assets/imgs/visual_recognition.svg"
+  public watsonVideoHD:any="../../assets/videos/IBM_Watson_Ambient_720.mp4";
+  public watsonVideoMobile:any="../../assets/videos/ibm_watson_logo_inverse_small.mp4";
+  public visualRecognition:any="../../assets/imgs/visual_recognition.svg";
   public randomImage:string = "https://loremflickr.com/200/200";
-  public url: string = "http://lorempixel.com/100/100/";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition:watsonVisualRecognition, public WatsonTranslation:watsonTranslation) {
   }
 
