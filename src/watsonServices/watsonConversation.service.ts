@@ -768,4 +768,21 @@ export class watsonConversation {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
+    public listLogEventsInAllWorkSpace (workspaceid): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLink +
+        '?version=' + WatsonConfig.authURL.conversation.version_date;
+        return this.http.get(link, options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
 }

@@ -24,6 +24,7 @@ export class WatsonConfig {
             authUsername: "4677f4f0-fde3-41ad-987a-ce10bd553252",
             authPassword: "0OMHKrwnyawh",
             baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces",
+            baseLink: "https://gateway.watsonplatform.net/conversation/api/v1/logs",
             version_date: "2018-02-16"
         },
     }

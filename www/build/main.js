@@ -937,6 +937,23 @@ var watsonConversation = (function () {
             return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
         });
     };
+    watsonConversation.prototype.listLogEventsInAllWorkSpace = function (workspaceid) {
+        var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authPassword);
+        var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
+            headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json',
+                'Authorization': "Basic " + token
+            })
+        });
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLink +
+            '?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        return this.http.get(link, options) // ...using post request
+            .map(function (res) { return res.json(); })
+            .catch(function (error) {
+            console.log(error);
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
     watsonConversation = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
@@ -982,6 +999,7 @@ var WatsonConfig = (function () {
             authUsername: "4677f4f0-fde3-41ad-987a-ce10bd553252",
             authPassword: "0OMHKrwnyawh",
             baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces",
+            baseLink: "https://gateway.watsonplatform.net/conversation/api/v1/logs",
             version_date: "2018-02-16"
         },
     };
