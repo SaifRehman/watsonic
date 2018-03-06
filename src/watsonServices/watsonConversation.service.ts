@@ -53,7 +53,7 @@ export class watsonConversation {
             });
     }
 
-    public deleteWorkspace(name,intents,entities,language,description,dialog_nodes): Observable<any> {
+    public deleteWorkspace(workspaceid): Observable<any> {
         const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
         const options = new RequestOptions({
             headers: new Headers({
@@ -62,7 +62,8 @@ export class watsonConversation {
                 'Accept': ' text/html'
             })
         });
-        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + WatsonConfig.authURL.conversation.version_date;
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid
+         '?version=' + WatsonConfig.authURL.conversation.version_date;
         return this.http.delete(link,options) // ...using post request
             .map((res: Response) => res.json())
             .catch((error: any) => {
