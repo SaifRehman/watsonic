@@ -666,4 +666,30 @@ export class watsonConversation {
                 return Observable.throw(error.json().error || 'Server error');
             });
     }
+
+
+    public createDialogNode(workspaceid,dialog_node,conditions,output,title): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'dialog_nodes' +
+        '?version=' + WatsonConfig.authURL.conversation.version_date;
+        const bodyObject = {
+            dialog_node,
+            conditions,
+            output,
+            title
+        };
+        const bodyString = JSON.stringify(bodyObject); // Stringify payload
+        return this.http.post(link,bodyString,options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
 }
