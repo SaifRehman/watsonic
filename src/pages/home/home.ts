@@ -7,9 +7,13 @@ import { watsonTranslation } from '../../watsonServices/watsonTranslation.servic
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public show:any="nothing"
-  public randomImage:string = "https://loremflickr.com/200/200"
-  public url: string = "http://lorempixel.com/100/100/";
+  public show:any="nothing";
+  public appTitle:any="Watsonic";
+  public watsonLogo:any="../../assets/imgs/brand.jpg";
+  public watsonVideoHD:any="../../assets/videos/IBM_Watson_Ambient_720.mp4";
+  public watsonVideoMobile:any="../../assets/videos/ibm_watson_logo_inverse_small.mp4";
+  public visualRecognition:any="../../assets/imgs/visual_recognition.svg";
+  public randomImage:string = "https://loremflickr.com/200/200";
   constructor(public navCtrl: NavController, public WatsonVisualRecognition:watsonVisualRecognition, public WatsonTranslation:watsonTranslation) {
   }
 
