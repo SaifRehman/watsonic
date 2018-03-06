@@ -21,7 +21,10 @@ export class WatsonConfig {
             version_date: "2017-09-21"
         },
         conversation:{
-
+            authUsername: "xxx",
+            authPassword: "xxx",
+            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces?version=",
+            version_date: "2018-02-16"
         },
     }
     public  constructor() {

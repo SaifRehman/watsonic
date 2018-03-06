@@ -214,7 +214,12 @@ var WatsonConfig = (function () {
             baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=",
             version_date: "2017-09-21"
         },
-        conversation: {},
+        conversation: {
+            authUsername: "xxx",
+            authPassword: "xxx",
+            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces?version=",
+            version_date: "2018-02-16"
+        },
     };
     return WatsonConfig;
 }());
