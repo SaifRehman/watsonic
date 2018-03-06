@@ -382,7 +382,7 @@ export class watsonConversation {
             });
     }
 
-    public deleteEntityValue(workspaceid,entity): Observable<any> {
+    public deleteEntityValue(workspaceid,entity,value): Observable<any> {
         const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
         const options = new RequestOptions({
             headers: new Headers({
@@ -391,7 +391,7 @@ export class watsonConversation {
             })
         });
         const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'entities' +
-        + '/' + entity + '/values' +
+        + '/' + entity + '/values' + '/' + value +
         '?version=' + WatsonConfig.authURL.conversation.version_date;
         return this.http.delete(link,options) // ...using post request
             .map((res: Response) => res.json())
@@ -478,6 +478,25 @@ export class watsonConversation {
         };
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link,bodyString,options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
+
+    public deleteSynonym(workspaceid,entity,value,synonym): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`,
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '/' + workspaceid + '/' + 'entities' +
+        + '/' + entity + '/values/' + value + '/' + 'synonyms' + '/' + synonym +
+        '?version=' + WatsonConfig.authURL.conversation.version_date;
+        return this.http.delete(link,options) // ...using post request
             .map((res: Response) => res.json())
             .catch((error: any) => {
                 console.log(error);
