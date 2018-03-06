@@ -20,6 +20,9 @@ export class WatsonConfig {
             baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=",
             version_date: "2017-09-21"
         },
+        conversation:{
+
+        },
     }
     public  constructor() {
 
