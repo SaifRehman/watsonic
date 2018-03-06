@@ -18,7 +18,7 @@ export class watsonConversation {
                 'Authorization': `Basic ${token}`
             })
         });
-        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + WatsonConfig.authURL.conversation.version_date;
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + '?version=' + WatsonConfig.authURL.conversation.version_date;
         return this.http.get(link, options) // ...using post request
             .map((res: Response) => res.json())
             .catch((error: any) => {
@@ -35,7 +35,7 @@ export class watsonConversation {
                 'Authorization': `Basic ${token}`
             })
         });
-        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + WatsonConfig.authURL.conversation.version_date;
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace +  + '?version=' + WatsonConfig.authURL.conversation.version_date;
         const bodyObject = {
             name,
             intents,
@@ -46,6 +46,24 @@ export class watsonConversation {
         };
         const bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link,bodyString,options) // ...using post request
+            .map((res: Response) => res.json())
+            .catch((error: any) => {
+                console.log(error);
+                return Observable.throw(error.json().error || 'Server error');
+            });
+    }
+
+    public deleteWorkspace(name,intents,entities,language,description,dialog_nodes): Observable<any> {
+        const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
+        const options = new RequestOptions({
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${token}`,
+                'Accept': ' text/html'
+            })
+        });
+        const link = WatsonConfig.authURL.conversation.baseLinkWorkspace + WatsonConfig.authURL.conversation.version_date;
+        return this.http.delete(link,options) // ...using post request
             .map((res: Response) => res.json())
             .catch((error: any) => {
                 console.log(error);

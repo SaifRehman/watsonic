@@ -223,7 +223,7 @@ var watsonConversation = (function () {
                 'Authorization': "Basic " + token
             })
         });
-        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + '?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
         return this.http.get(link, options) // ...using post request
             .map(function (res) { return res.json(); })
             .catch(function (error) {
@@ -239,7 +239,7 @@ var watsonConversation = (function () {
                 'Authorization': "Basic " + token
             })
         });
-        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + +'?version=' + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
         var bodyObject = {
             name: name,
             intents: intents,
@@ -250,6 +250,23 @@ var watsonConversation = (function () {
         };
         var bodyString = JSON.stringify(bodyObject); // Stringify payload
         return this.http.post(link, bodyString, options) // ...using post request
+            .map(function (res) { return res.json(); })
+            .catch(function (error) {
+            console.log(error);
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].throw(error.json().error || 'Server error');
+        });
+    };
+    watsonConversation.prototype.deleteWorkspace = function (name, intents, entities, language, description, dialog_nodes) {
+        var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authPassword);
+        var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
+            headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json',
+                'Authorization': "Basic " + token,
+                'Accept': ' text/html'
+            })
+        });
+        var link = __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.baseLinkWorkspace + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.version_date;
+        return this.http.delete(link, options) // ...using post request
             .map(function (res) { return res.json(); })
             .catch(function (error) {
             console.log(error);
@@ -300,7 +317,7 @@ var WatsonConfig = (function () {
         conversation: {
             authUsername: "xxx",
             authPassword: "xxx",
-            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces?version=",
+            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces",
             version_date: "2018-02-16"
         },
     };

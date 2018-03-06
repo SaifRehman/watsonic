@@ -23,7 +23,7 @@ export class WatsonConfig {
         conversation:{
             authUsername: "xxx",
             authPassword: "xxx",
-            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces?version=",
+            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces",
             version_date: "2018-02-16"
         },
     }
