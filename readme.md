@@ -215,6 +215,19 @@ this.WatsonToneAnalyzer.analyzeToneOnGivenText(text).subscribe((data) => {
 })
 ```
 
+## Watson Conversation Service 
+1. getWorkspace :- Get Workspaces
+
+```TypeScript
+import { watsonConversation } from '../../watsonServices/watsonConversation/watsonConversation.service'
+this.WatsonConversation.getWorkspace().subscribe((data) => {
+      console.log(data);
+},
+(error) => {
+    console.log(error)
+})
+```
+
 
 ### Special Thanks to Walid Abou Ali for the Guidance
 - [Walid Abou Ali](https://www.linkedin.com/in/walid-abou-ali-45680a43/)
