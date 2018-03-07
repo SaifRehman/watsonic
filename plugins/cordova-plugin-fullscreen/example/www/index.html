@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Full Screen Example</title>
+        
+        <style type="text/css">
+        body, html
+        {
+        	margin: 4px;
+        	padding: 0;
+        	position: relative;
+        }
+        
+        button
+        {
+			display: block;
+        	width: 100%;
+        	height: 42px;
+        	margin-bottom: 4px;
+        	font-size: 18px;
+        }
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <h1>Android 4.0+</h1>
+		<button id="leanModeButton">Lean Mode</button>
+		<button id="showUiButton">Show UI</button>
+		<button id="customButton">Custom Mode</button>
+		
+        <h1>Android 4.4+</h1>
+		<button id="immersiveModeButton">Immersive Mode</button>
+		<button id="showUnderUiButton">Show Under UI</button>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        
+		<script type="text/javascript">
+		
+		   	function successFunction()
+		   	{
+		   		console.log("It worked!");
+		   	}
+
+		   	function errorFunction(error)
+		   	{
+		   		console.error(error);
+		   	}
+		   	
+		   	function leanMode()
+		   	{
+		   		AndroidFullScreen.leanMode(successFunction, errorFunction);
+		   	}
+		   	
+		   	function immersiveMode()
+		   	{
+		   		AndroidFullScreen.immersiveMode(successFunction, errorFunction);
+		   	}
+		   	
+		   	function showUnderSystemUI()
+		   	{
+		   		AndroidFullScreen.showUnderSystemUI(successFunction, errorFunction);
+		   	}
+		   	
+		   	function showSystemUI()
+		   	{
+		   		AndroidFullScreen.showSystemUI(successFunction, errorFunction);
+		   	}
+		   	
+		   	function setSystemUiVisibility()
+		   	{
+		  		AndroidFullScreen.setSystemUiVisibility(AndroidFullScreen.SYSTEM_UI_FLAG_FULLSCREEN | AndroidFullScreen.SYSTEM_UI_FLAG_LOW_PROFILE, successFunction, errorFunction);
+		   	}
+			
+		   	function deviceReady()
+		   	{
+				document.getElementById('leanModeButton').addEventListener('click', leanMode);
+				document.getElementById('immersiveModeButton').addEventListener('click', immersiveMode)
+				document.getElementById('showUnderUiButton').addEventListener('click', showUnderSystemUI);
+				document.getElementById('showUiButton').addEventListener('click', showSystemUI);
+				document.getElementById('customButton').addEventListener('click', setSystemUiVisibility);
+		   	}
+		   	
+			document.addEventListener('deviceready', deviceReady);
+			
+		</script>
+    </body>
+</html>

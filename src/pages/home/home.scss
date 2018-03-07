@@ -1,3 +1,42 @@
 .nudge-right {
   left: -5px;
 }
+
+.text-align-center {
+  text-align: center;
+}
+
+.on-top {
+  z-index: 10;
+}
+
+.text-size-hero {
+  font-size: 3.5rem;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px color($colors, text-01);
+}
+
+.position-hero {
+  height: 100%;
+  margin-top: 100%;
+}
+
+@media(min-width: 769px) {
+  .position-hero {
+    margin-top: 25%;
+  }
+
+  .text-size-hero {
+    font-size: 5rem;
+  }
+}

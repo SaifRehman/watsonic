@@ -10,6 +10,7 @@ export class HomePage {
   public show:any="nothing";
   public appTitle:any="Watsonic";
   public watsonLogo:any="../../assets/imgs/brand.jpg";
+  public videoPlaceholder:any="../../assets/imgs/static.png";
   public watsonVideoHD:any="../../assets/videos/IBM_Watson_Ambient_720.mp4";
   public watsonVideoMobile:any="../../assets/videos/ibm_watson_logo_inverse_small.mp4";
   public visualRecognition:any="../../assets/imgs/visual_recognition.svg";
@@ -30,9 +31,22 @@ export class HomePage {
         console.log(error)
     })
   },
-  (error) => {
-      console.log(error)
-      refresher.complete();
-  });
+    (error) => {
+        console.log(error)
+        refresher.complete();
+    });
+  }
+
+  ionViewDidLoad() {
+    var videoFile = "";
+    if (window.innerWidth <= 768) {
+        videoFile = this.watsonVideoMobile;
+        document.querySelector('source').setAttribute('src', videoFile);
+    }
+    else if (window.innerWidth > 768) {
+        videoFile = this.watsonVideoHD;
+        console.log(videoFile);
+        document.querySelector('source').setAttribute('src', videoFile);
+    }
   }
 }

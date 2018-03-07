@@ -83894,18 +83894,12 @@ ion-navbar.toolbar {
 body {
   font-family: 'ibm-plex-sans', 'Helvetica Neue', Arial, sans-serif;
   color: #152935;
+  background-color: #10141A;
   line-height: 1;
 }
 
-ion-header .toolbar.bg-transparent {
-  position: absolute;
-}
-
-ion-header .toolbar.bg-transparent .toolbar-background {
-  background: transparent;
-}
-
-ion-header .toolbar.bg-transparent .toolbar-title {
+ion-content.content.video-bg {
+  background-color: #090B13;
   color: #dfe3e6;
 }
 
@@ -83920,4 +83914,42 @@ ion-header .toolbar.bg-transparent .toolbar-title {
 
 .nudge-right {
   left: -5px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.on-top {
+  z-index: 10;
+}
+
+.text-size-hero {
+  font-size: 3.5rem;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px #dfe3e6;
+}
+
+.position-hero {
+  height: 100%;
+  margin-top: 100%;
+}
+
+@media (min-width: 769px) {
+  .position-hero {
+    margin-top: 25%;
+  }
+  .text-size-hero {
+    font-size: 5rem;
+  }
 }
