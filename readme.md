@@ -38,7 +38,7 @@ Contributions of any kind welcome!
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscribe((data) => {
     console.log('data', data);
 },
@@ -51,7 +51,7 @@ this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURL(this.url).subscrib
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).subscribe((data) => {
     console.log('data', data);
 },
@@ -64,7 +64,7 @@ this.WatsonVisualRecognition.getVisualRecognitonForFacesDataByOnlyURL(this.url).
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceOnly(this.url).subscribe((data) => {
     console.log('data', data);
 },
@@ -78,7 +78,7 @@ this.WatsonVisualRecognition.getVisualRecognitonDataByOnlyURLWithHighConfidenceO
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getListOfCustomCreatedClassifiers().subscribe((data) => {
     console.log('data', data);
 },
@@ -92,7 +92,7 @@ this.WatsonVisualRecognition.getListOfCustomCreatedClassifiers().subscribe((data
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.getClassifiersDetails(classifier).subscribe((data) => {
     console.log('data', data);
 },
@@ -106,7 +106,7 @@ this.WatsonVisualRecognition.getClassifiersDetails(classifier).subscribe((data) 
 ### Example
 
 ```TypeScript
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 this.WatsonVisualRecognition.deleteClassifiers(classifier).subscribe((data) => {
     console.log('data', data);
 },
@@ -191,7 +191,7 @@ this.WatsonVisualRecognition.deleteClassifiers(classifier).subscribe((data) => {
 ### Example
 
 ```TypeScript
-import { watsonTranslation } from '../../watsonServices/watsonTranslation.service'
+import { watsonTranslation } from '../../watsonServices/watsonTranslation/watsonTranslation.service'
 this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe((data) => {
     console.log(data);
 },
@@ -206,7 +206,7 @@ this.WatsonTranslation.translateToALanguage('hello', 'en-es').subscribe((data) =
 ### Example
 
 ```TypeScript
-import { watsonToneAnalyzer } from '../../watsonServices/watsonToneAnalyzer.service'
+import { watsonToneAnalyzer } from '../../watsonServices/watsonToneAnalyzer/watsonToneAnalyzer.service'
 this.WatsonToneAnalyzer.analyzeToneOnGivenText(text).subscribe((data) => {
       console.log(data);
 },
