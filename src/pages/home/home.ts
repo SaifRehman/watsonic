@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition.service'
-import { watsonTranslation } from '../../watsonServices/watsonTranslation.service'
-import { watsonConversation } from '../../watsonServices/watsonConversation.service'
+import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
+import { watsonTranslation } from '../../watsonServices/watsonTranslation/watsonTranslation.service'
+import { watsonConversation } from '../../watsonServices/watsonConversation/watsonConversation.service'
 
 @Component({
   selector: 'page-home',
