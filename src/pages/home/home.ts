@@ -13,6 +13,9 @@ export class HomePage {
   public randomImage: string = "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/144966156-adoptable-cat-photo-tips-632x475.jpg"
   public url: string = "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/144966156-adoptable-cat-photo-tips-632x475.jpg";
   constructor(public WatsonConversation: watsonConversation,public navCtrl: NavController, public WatsonVisualRecognition: watsonVisualRecognition, public WatsonTranslation: watsonTranslation) {
+
+  }
+  ionViewDidLoad() {
     this.WatsonConversation.getWorkspace().subscribe((data) => {
       console.log('data', data);
     },
