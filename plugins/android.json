@@ -7,6 +7,7 @@
     "files": {}
   },
   "installed_plugins": {
+<<<<<<< HEAD
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -14,12 +15,31 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-splashscreen": {
+=======
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-fullscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-keyboard": {
+>>>>>>> frontend
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+<<<<<<< HEAD
     "cordova-plugin-ionic-keyboard": {
+=======
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-whitelist": {
+>>>>>>> frontend
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
