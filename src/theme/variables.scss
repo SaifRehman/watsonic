@@ -51,7 +51,8 @@ $colors: (
   support-01: #e0182d,
   support-02: #5aa700,
   support-03: #efc100,
-  support-04: #5aaafa
+  support-04: #5aaafa,
+  bg-color:   rgba(8, 9, 17, 0.4)
 );
 
 
@@ -106,5 +107,3 @@ $toolbar-background-wp: color($colors, primary);
 
 @import 'node_modules/carbon-components/scss/globals/scss/styles';
 $css--plex: true;
-
-$status-bar-color: rgba(0, 0, 0, 0);

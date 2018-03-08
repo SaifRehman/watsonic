@@ -32,9 +32,22 @@
 
         <ion-row justify-content-center align-self-end class="position-hero">
             <ion-fab center bottom>
-                <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+                <ion-row justify-content-center align-items-center>
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="circle circle-3"></div>
+                </ion-row>
+                <button ion-fab color="primary" class="ripple-parent on-top">
+                    <img src={{watsonLogo}} alt="Click to Expand Services">
+                </button>
                 <ion-fab-list side="top">
-                    <button ion-fab color="primary"><ion-icon name="logo-vimeo"></ion-icon></button>
+                    <ion-row justify-content-left align-items-center>
+                        <button ion-fab color="ui-04">
+                            <img src={{visualRecognition}} alt="Visual Recognition">
+                        </button>
+                        <br>
+                        <span class="text-align-center nudge-right">Visual Recognition</span>
+                    </ion-row>
                 </ion-fab-list>
                 <ion-fab-list side="bottom">
                     <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>

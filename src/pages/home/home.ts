@@ -9,7 +9,7 @@ import { watsonTranslation } from '../../watsonServices/watsonTranslation.servic
 export class HomePage {
   public show:any="nothing";
   public appTitle:any="Watsonic";
-  public watsonLogo:any="../../assets/imgs/brand.jpg";
+  public watsonLogo:any="../../assets/imgs/brand.png";
   public videoPlaceholder:any="../../assets/imgs/static.png";
   public watsonVideoHD:any="../../assets/videos/IBM_Watson_Ambient_720.mp4";
   public watsonVideoMobile:any="../../assets/videos/ibm_watson_logo_inverse_small.mp4";
