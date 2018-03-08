@@ -10,10 +10,6 @@
 
 <ion-content padding class="video-bg">
     <ion-grid style="height: 100%">
-        <ion-refresher (ionRefresh)="doRefresh($event)">
-            <ion-refresher-content></ion-refresher-content>
-        </ion-refresher>
-
         <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:auto;height:100vh;background:transparent;">
             <div class="flex flex-column">
                 <video class="" autoplay="" data-playtimes="100" style="width:102vw;height:auto;" loop preload="auto" poster="{{videoPlaceholder}}">
