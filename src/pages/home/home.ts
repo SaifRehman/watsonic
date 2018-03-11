@@ -34,7 +34,7 @@ export class HomePage {
         document.querySelector('source').setAttribute('src', videoFile);
     }
 
-    this.WatsonConversation.listWorkspacee().subscribe((data) => {
+    this.WatsonConversation.listWorkspace().subscribe((data) => {
       console.log('data', data);
     },
     (error) => {
