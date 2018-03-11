@@ -10,7 +10,7 @@ export class watsonConversation {
 
     }
 
-    public getWorkspace(): Observable<any> {
+    public listWorkspace(): Observable<any> {
         const token = btoa(WatsonConfig.authURL.conversation.authUsername+":"+WatsonConfig.authURL.conversation.authPassword);
         const options = new RequestOptions({
             headers: new Headers({

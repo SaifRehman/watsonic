@@ -1,10 +1,6 @@
 webpackJsonp([0],{
 
-<<<<<<< HEAD
-/***/ 161:
-=======
 /***/ 163:
->>>>>>> frontend
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -17,19 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-<<<<<<< HEAD
-webpackEmptyAsyncContext.id = 161;
-
-/***/ }),
-
-/***/ 206:
-=======
 webpackEmptyAsyncContext.id = 163;
 
 /***/ }),
 
 /***/ 208:
->>>>>>> frontend
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -42,35 +30,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-<<<<<<< HEAD
-webpackEmptyAsyncContext.id = 206;
-
-/***/ }),
-
-/***/ 252:
-=======
 webpackEmptyAsyncContext.id = 208;
 
 /***/ }),
 
 /***/ 253:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__ = __webpack_require__(345);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__ = __webpack_require__(346);
->>>>>>> frontend
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -91,9 +64,6 @@ var HomePage = (function () {
         this.navCtrl = navCtrl;
         this.WatsonVisualRecognition = WatsonVisualRecognition;
         this.WatsonTranslation = WatsonTranslation;
-<<<<<<< HEAD
-        this.show = "";
-=======
         this.show = "nothing";
         this.appTitle = "Watsonic";
         this.watsonLogo = "../../assets/imgs/brand.png";
@@ -101,13 +71,10 @@ var HomePage = (function () {
         this.watsonVideoHD = "../../assets/videos/IBM_Watson_Ambient_720.mp4";
         this.watsonVideoMobile = "../../assets/videos/ibm_watson_logo_inverse_small.mp4";
         this.visualRecognition = "../../assets/imgs/visual_recognition.svg";
->>>>>>> frontend
         this.randomImage = "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/144966156-adoptable-cat-photo-tips-632x475.jpg";
         this.url = "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/144966156-adoptable-cat-photo-tips-632x475.jpg";
     }
     HomePage.prototype.ionViewDidLoad = function () {
-<<<<<<< HEAD
-=======
         var videoFile = "";
         if (window.innerWidth <= 768) {
             videoFile = this.watsonVideoMobile;
@@ -118,8 +85,7 @@ var HomePage = (function () {
             console.log(videoFile);
             document.querySelector('source').setAttribute('src', videoFile);
         }
->>>>>>> frontend
-        this.WatsonConversation.getWorkspace().subscribe(function (data) {
+        this.WatsonConversation.listWorkspacee().subscribe(function (data) {
             console.log('data', data);
         }, function (error) {
             console.log(error);
@@ -127,26 +93,19 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{show}}\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content></ion-refresher-content>\n  </ion-refresher>\n  <div style="display:table-cell; vertical-align:middle; text-align:center">\n    <img src={{randomImage}} alt="HTML5 Icon" width="400" height="400">\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
-=======
             selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<!-- <ion-header color="primary" no-border>\n\n    <ion-navbar class="bg-transparent">\n       <ion-title class="bg-transparent">\n            <h2 class="bx--cloud-header-brand__text">{{appTitle}}</h2>\n        </ion-title>\n    </ion-navbar>\n    \n</ion-header> -->\n\n<ion-content padding class="video-bg">\n    <ion-grid style="height: 100%">\n        <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:auto;height:100vh;background:transparent;">\n            <div class="flex flex-column">\n                <video class="" autoplay="" data-playtimes="100" style="width:102vw;height:auto;" loop preload="auto" poster="{{videoPlaceholder}}">\n                    <source src="">\n                    <img src="{{videoPlaceholder}}" title="Your browser does not support the video tag">\n                </video>\n            </div>\n        </div>\n\n        <ion-row justify-content-center align-items-center class="position-hero">\n            <div class="text-align-center on-top">\n                <h1 class="text-size-hero font-weight-bold text-shadow">Welcome to <span>Watsonic</span></h1>\n                <h3 class="font-mono text-shadow">Your One-Stop-Shop for all Watson Services</h3>\n            </div>\n        </ion-row>\n\n        <ion-row justify-content-center align-self-end class="position-hero">\n            <ion-fab center bottom>\n                <ion-row justify-content-center align-items-center>\n                    <div class="circle circle-1"></div>\n                    <div class="circle circle-2"></div>\n                    <div class="circle circle-3"></div>\n                </ion-row>\n                <button ion-fab color="primary" class="ripple-parent on-top">\n                    <img src={{watsonLogo}} alt="Click to Expand Services">\n                </button>\n                <ion-fab-list side="top">\n                    <ion-row justify-content-left align-items-center>\n                        <button ion-fab color="ui-04">\n                            <img src={{visualRecognition}} alt="Visual Recognition">\n                        </button>\n                        <br>\n                        <span class="text-align-center nudge-right">Visual Recognition</span>\n                    </ion-row>\n                </ion-fab-list>\n                <ion-fab-list side="bottom">\n                    <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>\n                </ion-fab-list>\n                <ion-fab-list side="left">\n                    <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>\n                </ion-fab-list>\n                <ion-fab-list side="right">\n                    <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>\n                </ion-fab-list>\n            </ion-fab>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
->>>>>>> frontend
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__["a" /* watsonConversation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */], __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__["a" /* watsonTranslation */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__["a" /* watsonConversation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__["a" /* watsonConversation */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__["a" /* watsonTranslation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__["a" /* watsonTranslation */]) === "function" && _d || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 253:
-=======
 /***/ 254:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -154,11 +113,7 @@ var HomePage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(674);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(83);
->>>>>>> frontend
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -268,27 +223,16 @@ var watsonVisualRecognition = (function () {
     };
     watsonVisualRecognition = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
-    ], watsonVisualRecognition);
-    return watsonVisualRecognition;
-    var _a;
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], watsonVisualRecognition);
     return watsonVisualRecognition;
->>>>>>> frontend
 }());
 
 //# sourceMappingURL=watsonVisualRecognition.service.js.map
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 344:
-=======
 /***/ 345:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,15 +240,9 @@ var watsonVisualRecognition = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(674);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(144);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(146);
->>>>>>> frontend
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -347,27 +285,16 @@ var watsonTranslation = (function () {
     };
     watsonTranslation = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
-    ], watsonTranslation);
-    return watsonTranslation;
-    var _a;
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], watsonTranslation);
     return watsonTranslation;
->>>>>>> frontend
 }());
 
 //# sourceMappingURL=watsonTranslation.service.js.map
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 345:
-=======
 /***/ 346:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -375,11 +302,7 @@ var watsonTranslation = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(674);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(83);
->>>>>>> frontend
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -398,7 +321,7 @@ var watsonConversation = (function () {
     function watsonConversation(http) {
         this.http = http;
     }
-    watsonConversation.prototype.getWorkspace = function () {
+    watsonConversation.prototype.listWorkspace = function () {
         var token = btoa(__WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authUsername + ":" + __WEBPACK_IMPORTED_MODULE_2__watson_config__["a" /* WatsonConfig */].authURL.conversation.authPassword);
         var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({
             headers: new __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Headers */]({
@@ -1237,38 +1160,22 @@ var watsonConversation = (function () {
     };
     watsonConversation = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
-    ], watsonConversation);
-    return watsonConversation;
-    var _a;
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], watsonConversation);
     return watsonConversation;
->>>>>>> frontend
 }());
 
 //# sourceMappingURL=watsonConversation.service.js.map
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 346:
-=======
 /***/ 347:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(351);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(352);
->>>>>>> frontend
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1276,26 +1183,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 351:
-=======
 /***/ 352:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__watsonServices_watson_module__ = __webpack_require__(675);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__(57);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(389);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(251);
@@ -1304,7 +1198,6 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__watsonServices_watson_module__ = __webpack_require__(676);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(57);
->>>>>>> frontend
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1320,36 +1213,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-<<<<<<< HEAD
-=======
 
 var config = {
     statusbarPadding: true
 };
->>>>>>> frontend
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */])({
             declarations: [
-<<<<<<< HEAD
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
-                    links: []
-                }),
-                __WEBPACK_IMPORTED_MODULE_7__watsonServices_watson_module__["a" /* WatsonModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_http__["c" /* HttpModule */],
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]
-=======
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */]
             ],
@@ -1365,15 +1238,11 @@ var AppModule = (function () {
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */]
->>>>>>> frontend
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-<<<<<<< HEAD
-=======
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_android_full_screen__["a" /* AndroidFullScreen */],
->>>>>>> frontend
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -1385,27 +1254,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 394:
-=======
 /***/ 396:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(252);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_android_full_screen__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(253);
->>>>>>> frontend
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1419,23 +1277,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-<<<<<<< HEAD
-
-var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
-        platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            statusBar.styleDefault();
-            splashScreen.hide();
-        });
-    }
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-=======
 //import { SplashScreen } from '@ionic-native/splash-screen';
 //import { MenuController } from 'ionic-angular';
 
@@ -1460,7 +1301,6 @@ var MyApp = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/'<ion-nav [root]="rootPage" #nav swipeBackEnabled="false"></ion-nav>\n\n<!-- <ion-menu [content]="nav">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu> -->\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_android_full_screen__["a" /* AndroidFullScreen */]])
->>>>>>> frontend
     ], MyApp);
     return MyApp;
 }());
@@ -1469,73 +1309,17 @@ var MyApp = (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 674:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WatsonConfig; });
-var WatsonConfig = (function () {
-    function WatsonConfig() {
-    }
-    WatsonConfig.authURL = {
-        wantsonVisualRecognition: {
-            api_key: "5dd5250c79742263cd33e095cc938d1a0952d690",
-            version_date: "2016-05-20",
-            threshold: 0,
-            baseLinkClassify: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=",
-            baseLinkClassifyFace: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key=",
-            baseLinkClassifier: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key=",
-            baseLink: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/"
-        },
-        watsonTranslation: {
-            authUsername: "55b4673e-be7d-4d06-9c50-0fd7867b40b2",
-            authPassword: "QRGgAh6DY22n",
-            baseLink: "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
-        },
-        toneAnalyzer: {
-            authUsername: "93eccd0e-13d9-4608-a6b0-adb1ffe368ab",
-            authPassword: "s1TbeXdgMaDB",
-            baseLink: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=",
-            version_date: "2017-09-21"
-        },
-        conversation: {
-            authUsername: "4677f4f0-fde3-41ad-987a-ce10bd553252",
-            authPassword: "0OMHKrwnyawh",
-            baseLinkWorkspace: "https://gateway.watsonplatform.net/conversation/api/v1/workspaces",
-            baseLink: "https://gateway.watsonplatform.net/conversation/api/v1/logs",
-            version_date: "2018-02-16"
-        },
-    };
-    return WatsonConfig;
-}());
-
-//# sourceMappingURL=watson.config.js.map
-
-/***/ }),
-
-/***/ 675:
-=======
 /***/ 676:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WatsonModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(676);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_watsonTranslation_service__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonToneAnalyzer_watsonToneAnalyzer_service__ = __webpack_require__(677);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__watsonConversation_watsonConversation_service__ = __webpack_require__(345);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(677);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_watsonTranslation_service__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonToneAnalyzer_watsonToneAnalyzer_service__ = __webpack_require__(678);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__watsonConversation_watsonConversation_service__ = __webpack_require__(346);
->>>>>>> frontend
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1572,11 +1356,7 @@ var WatsonModule = (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 676:
-=======
 /***/ 677:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1606,11 +1386,7 @@ var watsonAuthService = (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 677:
-=======
 /***/ 678:
->>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1618,15 +1394,9 @@ var watsonAuthService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(674);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(144);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watson_config__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(146);
->>>>>>> frontend
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1690,25 +1460,13 @@ var watsonToneAnalyzer = (function () {
     };
     watsonToneAnalyzer = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _a || Object])
-    ], watsonToneAnalyzer);
-    return watsonToneAnalyzer;
-    var _a;
-=======
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
     ], watsonToneAnalyzer);
     return watsonToneAnalyzer;
->>>>>>> frontend
 }());
 
 //# sourceMappingURL=watsonToneAnalyzer.service.js.map
 
-<<<<<<< HEAD
-/***/ })
-
-},[346]);
-=======
 /***/ }),
 
 /***/ 83:
@@ -1756,5 +1514,4 @@ var WatsonConfig = (function () {
 /***/ })
 
 },[347]);
->>>>>>> frontend
 //# sourceMappingURL=main.js.map

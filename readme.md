@@ -216,11 +216,11 @@ this.WatsonToneAnalyzer.analyzeToneOnGivenText(text).subscribe((data) => {
 ```
 
 ## Watson Conversation Service 
-1. getWorkspace :- Get Workspaces
+1. listWorkspace :- Get Workspaces
 
 ```TypeScript
 import { watsonConversation } from '../../watsonServices/watsonConversation/watsonConversation.service'
-this.WatsonConversation.getWorkspace().subscribe((data) => {
+this.WatsonConversation.listWorkspace().subscribe((data) => {
       console.log(data);
 },
 (error) => {

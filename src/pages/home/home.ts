@@ -34,11 +34,13 @@ export class HomePage {
         document.querySelector('source').setAttribute('src', videoFile);
     }
 
-    this.WatsonConversation.getWorkspace().subscribe((data) => {
+    this.WatsonConversation.listWorkspacee().subscribe((data) => {
       console.log('data', data);
     },
     (error) => {
         console.log(error);
     });
+
+    
   }
 }
