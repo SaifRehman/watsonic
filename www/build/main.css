@@ -89666,35 +89666,35 @@ ion-content.content.video-bg {
   left: 0;
 }
 
-.nudge-right {
+page-home .nudge-right {
   left: -5px;
 }
 
-.text-align-center {
+page-home .text-align-center {
   text-align: center;
 }
 
-.on-top {
+page-home .on-top {
   z-index: 10;
 }
 
-.text-size-hero {
+page-home .text-size-hero {
   font-size: 3.5rem;
 }
 
-.font-mono {
+page-home .font-mono {
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
-.font-weight-bold {
+page-home .font-weight-bold {
   font-weight: bold;
 }
 
-.text-shadow {
+page-home .text-shadow {
   text-shadow: 2px 2px 2px #152934;
 }
 
-.position-hero {
+page-home .position-hero {
   height: 100%;
   margin-top: 100%;
 }
@@ -89725,7 +89725,7 @@ ion-content.content.video-bg {
   }
 }
 
-.circle {
+page-home .circle {
   margin: 0 auto;
   width: 56px;
   height: 56px;
@@ -89736,26 +89736,26 @@ ion-content.content.video-bg {
   z-index: 1;
 }
 
-.circle-1 {
+page-home .circle-1 {
   -webkit-animation: circle 3s infinite linear;
   animation: circle 3s infinite linear;
 }
 
-.circle-2 {
+page-home .circle-2 {
   -webkit-animation: circle 2s infinite linear;
   animation: circle 2s infinite linear;
 }
 
-.circle-3 {
+page-home .circle-3 {
   -webkit-animation: circle 1s infinite linear;
   animation: circle 1s infinite linear;
 }
 
 @media (min-width: 769px) {
-  .position-hero {
+  page-home .position-hero {
     margin-top: 25%;
   }
-  .text-size-hero {
+  page-home .text-size-hero {
     font-size: 5rem;
   }
 }

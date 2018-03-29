@@ -7,6 +7,8 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { ConnectionBackend } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { VisualRecognitionPage } from '../pages/visualRecognition/visualRecognition';
+
 import { WatsonModule} from '../watsonServices/watson.module';
 import { Http} from '@angular/http';
 import {HttpModule} from '@angular/http';
@@ -18,7 +20,8 @@ var config = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    VisualRecognitionPage
   ],
   imports: [
     BrowserModule,
@@ -29,13 +32,13 @@ var config = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    VisualRecognitionPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AndroidFullScreen,
-    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

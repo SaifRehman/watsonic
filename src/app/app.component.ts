@@ -6,11 +6,13 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 //import { MenuController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
+import { VisualRecognitionPage } from '../pages/visualRecognition/visualRecognition';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = VisualRecognitionPage;
   pages: Array<{ title: string, component: any }>;
   
 
