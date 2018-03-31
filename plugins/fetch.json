@@ -1,6 +1,4 @@
 {
-<<<<<<< HEAD
-=======
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
@@ -17,7 +15,6 @@
     "is_top_level": true,
     "variables": {}
   },
->>>>>>> frontend
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
