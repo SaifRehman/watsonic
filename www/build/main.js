@@ -57,7 +57,7 @@ var VisualRecognitionPage = (function () {
     };
     VisualRecognitionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-visualRecognition',template:/*ion-inline-start:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>Login</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content>\n\n sgh\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/
+            selector: 'page-visualRecognition',template:/*ion-inline-start:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>My Visual Recognition App</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content>\n\n    <button ion-button color="danger">Take a picture</button>\n\n    <button ion-button color="secondary">Choose from Gallery</button>\n\n    <button ion-button color="secondary">Get Random Image</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], VisualRecognitionPage);
