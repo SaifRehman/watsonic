@@ -108,3 +108,5 @@ export class watsonVisualRecognition {
     }
 
 }
+
+
