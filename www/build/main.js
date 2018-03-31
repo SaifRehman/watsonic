@@ -40,13 +40,6 @@ webpackEmptyAsyncContext.id = 206;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VisualRecognitionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__ = __webpack_require__(345);
-=======
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,40 +53,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var VisualRecognitionPage = (function () {
     function VisualRecognitionPage() {
     }
-<<<<<<< HEAD
-    HomePage.prototype.ionViewDidLoad = function () {
-        var videoFile = "";
-        if (window.innerWidth <= 768) {
-            videoFile = this.watsonVideoMobile;
-            document.querySelector('source').setAttribute('src', videoFile);
-        }
-        else if (window.innerWidth > 768) {
-            videoFile = this.watsonVideoHD;
-            console.log(videoFile);
-            document.querySelector('source').setAttribute('src', videoFile);
-        }
-        this.WatsonConversation.listWorkspace().subscribe(function (data) {
-            console.log('data', data);
-        }, function (error) {
-            console.log(error);
-        });
-=======
     VisualRecognitionPage.prototype.ionViewDidLoad = function () {
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
     };
     VisualRecognitionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-visualRecognition',template:/*ion-inline-start:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>My Visual Recognition App</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content>\n\n    <button ion-button color="danger">Take a picture</button>\n\n    <button ion-button color="secondary">Choose from Gallery</button>\n\n    <button ion-button color="secondary">Get Random Image</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\visualRecognition\visualRecognition.html"*/
+            selector: 'page-visualRecognition',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/visualRecognition/visualRecognition.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>My Visual Recognition App</ion-title>\n    </ion-navbar>\n  </ion-header>\n<ion-content>\n    <button ion-button color="support-01">Take a picture</button>\n    <button ion-button color="support-01">Choose from Gallery</button>\n    <button ion-button color="support-01">Get Random Image</button>\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/visualRecognition/visualRecognition.html"*/
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__["a" /* watsonConversation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */], __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__["a" /* watsonTranslation */]])
-    ], HomePage);
-    return HomePage;
-=======
         __metadata("design:paramtypes", [])
     ], VisualRecognitionPage);
     return VisualRecognitionPage;
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
 }());
 
 //# sourceMappingURL=visualRecognition.js.map
@@ -1190,16 +1158,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_android_full_screen__ = __webpack_require__(250);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(395);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__watsonServices_watson_module__ = __webpack_require__(676);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(59);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_visualRecognition_visualRecognition__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__watsonServices_watson_module__ = __webpack_require__(677);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(59);
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1268,11 +1230,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_android_full_screen__ = __webpack_require__(250);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(251);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_visualRecognition_visualRecognition__ = __webpack_require__(251);
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1305,7 +1263,7 @@ var MyApp = (function () {
         }
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\app\app.html"*/'<ion-nav [root]="rootPage" #nav swipeBackEnabled="false"></ion-nav>\n\n\n\n<!-- <ion-menu [content]="nav">\n\n\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu> -->\n\n'/*ion-inline-end:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/'<ion-nav [root]="rootPage" #nav swipeBackEnabled="false"></ion-nav>\n\n<!-- <ion-menu [content]="nav">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu> -->\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_android_full_screen__["a" /* AndroidFullScreen */]])
     ], MyApp);
@@ -1375,7 +1333,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\home\home.html"*/'<!-- <ion-header color="primary" no-border>\n\n\n\n    <ion-navbar class="bg-transparent">\n\n       <ion-title class="bg-transparent">\n\n            <h2 class="bx--cloud-header-brand__text">{{appTitle}}</h2>\n\n        </ion-title>\n\n    </ion-navbar>\n\n    \n\n</ion-header> -->\n\n\n\n<ion-content padding class="video-bg">\n\n    <ion-grid style="height: 100%">\n\n        <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:auto;height:100vh;background:transparent;">\n\n            <div class="flex flex-column">\n\n                <video class="" autoplay="" data-playtimes="100" style="width:102vw;height:auto;" loop preload="auto" poster="{{videoPlaceholder}}">\n\n                    <source src="">\n\n                    <img src="{{videoPlaceholder}}" title="Your browser does not support the video tag">\n\n                </video>\n\n            </div>\n\n        </div>\n\n\n\n        <ion-row justify-content-center align-items-center class="position-hero">\n\n            <div class="text-align-center on-top">\n\n                <h1 class="text-size-hero font-weight-bold text-shadow">Welcome to <span>Watsonic</span></h1>\n\n                <h3 class="font-mono text-shadow">Your One-Stop-Shop for all Watson Services</h3>\n\n            </div>\n\n        </ion-row>\n\n\n\n        <ion-row justify-content-center align-self-end class="position-hero">\n\n            <ion-fab center bottom>\n\n                <ion-row justify-content-center align-items-center>\n\n                    <div class="circle circle-1"></div>\n\n                    <div class="circle circle-2"></div>\n\n                    <div class="circle circle-3"></div>\n\n                </ion-row>\n\n                <button ion-fab color="primary" class="ripple-parent on-top">\n\n                    <img src={{watsonLogo}} alt="Click to Expand Services">\n\n                </button>\n\n                <ion-fab-list side="top">\n\n                    <ion-row justify-content-left align-items-center>\n\n                        <button ion-fab color="ui-04">\n\n                            <img src={{visualRecognition}} alt="Visual Recognition">\n\n                        </button>\n\n                        <br>\n\n                        <span class="text-align-center nudge-right">Visual Recognition</span>\n\n                    </ion-row>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="bottom">\n\n                    <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="left">\n\n                    <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>\n\n                </ion-fab-list>\n\n                <ion-fab-list side="right">\n\n                    <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>\n\n                </ion-fab-list>\n\n            </ion-fab>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\MehakManwani\Desktop\Coffee\watsonic\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/'<!-- <ion-header color="primary" no-border>\n\n    <ion-navbar class="bg-transparent">\n       <ion-title class="bg-transparent">\n            <h2 class="bx--cloud-header-brand__text">{{appTitle}}</h2>\n        </ion-title>\n    </ion-navbar>\n    \n</ion-header> -->\n\n<ion-content padding class="video-bg">\n    <ion-grid style="height: 100%">\n        <div class="video-background-container position-absolute top-left-0 nudge-right" style="width:auto;height:100vh;background:transparent;">\n            <div class="flex flex-column">\n                <video class="" autoplay="" data-playtimes="100" style="width:102vw;height:auto;" loop preload="auto" poster="{{videoPlaceholder}}">\n                    <source src="">\n                    <img src="{{videoPlaceholder}}" title="Your browser does not support the video tag">\n                </video>\n            </div>\n        </div>\n\n        <ion-row justify-content-center align-items-center class="position-hero">\n            <div class="text-align-center on-top">\n                <h1 class="text-size-hero font-weight-bold text-shadow">Welcome to <span>Watsonic</span></h1>\n                <h3 class="font-mono text-shadow">Your One-Stop-Shop for all Watson Services</h3>\n            </div>\n        </ion-row>\n\n        <ion-row justify-content-center align-self-end class="position-hero">\n            <ion-fab center bottom>\n                <ion-row justify-content-center align-items-center>\n                    <div class="circle circle-1"></div>\n                    <div class="circle circle-2"></div>\n                    <div class="circle circle-3"></div>\n                </ion-row>\n                <button ion-fab color="primary" class="ripple-parent on-top">\n                    <img src={{watsonLogo}} alt="Click to Expand Services">\n                </button>\n                <ion-fab-list side="top">\n                    <ion-row justify-content-left align-items-center>\n                        <button ion-fab color="ui-04">\n                            <img src={{visualRecognition}} alt="Visual Recognition">\n                        </button>\n                        <br>\n                        <span class="text-align-center nudge-right">Visual Recognition</span>\n                    </ion-row>\n                </ion-fab-list>\n                <ion-fab-list side="bottom">\n                    <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>\n                </ion-fab-list>\n                <ion-fab-list side="left">\n                    <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>\n                </ion-fab-list>\n                <ion-fab-list side="right">\n                    <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>\n                </ion-fab-list>\n            </ion-fab>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/saifrehman/Desktop/watsonic/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__watsonServices_watsonConversation_watsonConversation_service__["a" /* watsonConversation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__watsonServices_watsonVisualRecognition_watsonVisualRecognition_service__["a" /* watsonVisualRecognition */], __WEBPACK_IMPORTED_MODULE_3__watsonServices_watsonTranslation_watsonTranslation_service__["a" /* watsonTranslation */]])
     ], HomePage);
@@ -1392,17 +1350,10 @@ var HomePage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WatsonModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(677);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_watsonTranslation_service__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonToneAnalyzer_watsonToneAnalyzer_service__ = __webpack_require__(678);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(678);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__watsonVisualRecognition_watsonVisualRecognition_service__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__watsonTranslation_watsonTranslation_service__ = __webpack_require__(344);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__watsonToneAnalyzer_watsonToneAnalyzer_service__ = __webpack_require__(679);
->>>>>>> 8194d7827f6d4dbcb54641f8163f0e17106d801e
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__watsonConversation_watsonConversation_service__ = __webpack_require__(345);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
