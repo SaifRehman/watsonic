@@ -1,10 +1,27 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>My Visual Recognition App</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-fab color="ui-04">
+        <img src={{visualRecognition}} alt="Visual Recognition">
+      </button>
+    </ion-buttons>
+    <ion-title class="font-weight-bold">My VR App</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="brand-01">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-    <button ion-button color="danger">Take a picture</button>
-    <button ion-button color="secondary">Choose from Gallery</button>
-    <button ion-button color="secondary">Get Random Image</button>
+  <p>
+    <button ion-button round color="brand-01" icon-left class="text-shadow font-mono button-option"> <ion-icon name="camera" color="field-01"></ion-icon>Take a picture</button>
+  </p>
+  <p>
+    <button ion-button round color="brand-01" icon-left class="text-shadow font-mono button-option"><ion-icon name="folder" color="field-01"></ion-icon>Choose from Gallery</button>
+  </p>
+  <p>
+    <button ion-button round color="brand-01" icon-left class="text-shadow font-mono button-option"><ion-icon name="shuffle" color="field-01"></ion-icon>Get Random Image</button>
+  </p>
 </ion-content>

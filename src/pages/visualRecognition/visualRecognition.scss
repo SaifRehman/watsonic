@@ -1,2 +1,24 @@
 page-visualRecognition{
+.text-align-center {
+    text-align: center;
+}
+.font-mono {
+     font-family: 'IBM Plex Mono';
+ }
+      
+.font-weight-bold {
+    font-weight: bold;
+    margin-top: 25px;
+}
+      
+.text-shadow {
+    text-shadow: 2px 2px 2px color($colors, text-01);
+}
+
+.button-option{
+   padding: 2%;
+   margin-top: 5%;
+   margin-left: 2%;
+}
+
 }

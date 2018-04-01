@@ -6,6 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'visualRecognition.html'
 })
 export class VisualRecognitionPage {
+  public visualRecognition:any="../../assets/imgs/visual_recognition.svg";
   constructor() {
   }
 
