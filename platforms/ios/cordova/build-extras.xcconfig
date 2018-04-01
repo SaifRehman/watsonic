@@ -1,3 +1,0 @@
-CODE_SIGN_IDENTITY = watsonic
-CODE_SIGN_IDENTITY[sdk=iphoneos*] = watsonic
-DEVELOPMENT_TEAM = WatsonicTeam
