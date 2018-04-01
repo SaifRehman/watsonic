@@ -12,7 +12,6 @@ import { VisualRecognitionPage } from '../pages/visualRecognition/visualRecognit
 import { WatsonModule} from '../watsonServices/watson.module';
 import { Http} from '@angular/http';
 import {HttpModule} from '@angular/http';
-import { Camera } from '@ionic-native/camera';
 
 var config = {
   statusbarPadding: true
@@ -40,7 +39,6 @@ var config = {
     StatusBar,
     SplashScreen,
     AndroidFullScreen,
-    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
