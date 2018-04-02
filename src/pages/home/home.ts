@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { watsonVisualRecognition } from '../../watsonServices/watsonVisualRecognition/watsonVisualRecognition.service'
 import { watsonTranslation } from '../../watsonServices/watsonTranslation/watsonTranslation.service'
 import { watsonConversation } from '../../watsonServices/watsonConversation/watsonConversation.service'
-
+import {VisualRecognitionPage} from '../visualRecognition/visualRecognition'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -42,5 +42,8 @@ export class HomePage {
     });
 
     
+  }
+  home(){
+    this.navCtrl.push(VisualRecognitionPage)
   }
 }

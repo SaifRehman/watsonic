@@ -12,7 +12,7 @@ import { VisualRecognitionPage } from '../pages/visualRecognition/visualRecognit
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = VisualRecognitionPage;
+  rootPage:any = HomePage;
   pages: Array<{ title: string, component: any }>;
   
 
